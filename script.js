@@ -34,6 +34,7 @@ const translations = {
     zh: {
         title: "Project Card",
         visit: "访问项目",
+        "visit-desktop": "访问项目（请在电脑端体验）",
         source: "源码",
         
         // Austin English
@@ -63,6 +64,7 @@ const translations = {
     en: {
         title: "Project Card",
         visit: "Visit Project",
+        "visit-desktop": "Visit Project (Best on Desktop)",
         source: "Source Code",
         
         // Austin English
@@ -143,8 +145,31 @@ class ProjectCard {
             }
         });
         
+        // 预加载所有图片，特别是移动端图片
+        this.preloadAllImages();
+        
         // 强制重排，确保状态生效
         document.body.offsetHeight;
+    }
+
+    /**
+     * Preload all project images
+     */
+    preloadAllImages() {
+        const allImages = document.querySelectorAll('.project-screenshot');
+        allImages.forEach(img => {
+            // 确保图片能正确加载
+            if (img.src && !img.complete) {
+                const tempImg = new Image();
+                tempImg.onload = () => {
+                    // 图片加载完成后，确保原图片显示正确
+                    if (!img.complete) {
+                        img.src = tempImg.src;
+                    }
+                };
+                tempImg.src = img.src;
+            }
+        });
     }
 
     /**
@@ -622,7 +647,27 @@ class ProjectCard {
         } else {
             desktopScreenshot?.classList.remove('active');
             mobileScreenshots?.classList.add('active');
+            
+            // 确保移动端图片正确加载
+            this.ensureMobileImagesLoaded(mobileScreenshots);
         }
+    }
+
+    /**
+     * Ensure mobile images are properly loaded
+     */
+    ensureMobileImagesLoaded(mobileScreenshots) {
+        if (!mobileScreenshots) return;
+        
+        const mobileImages = mobileScreenshots.querySelectorAll('.mobile-screenshot');
+        mobileImages.forEach(img => {
+            if (!img.complete || img.naturalHeight === 0) {
+                // 强制重新加载图片
+                const src = img.src;
+                img.src = '';
+                img.src = src;
+            }
+        });
     }
 }
 
