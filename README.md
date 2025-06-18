@@ -65,7 +65,8 @@ ProjectCard/
 └── 📁 src/
     └── snapshot/          # 项目截图
         ├── AustinEnglish/
-        └── NoahsIELTSTimer/
+        ├── NoahsIELTSTimer/
+        └── QuoteCard/
 ```
 
 ## 🚀 快速开始
@@ -98,7 +99,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的两个精选项目：
+当前展示的三个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -123,6 +124,19 @@ http://localhost:8000
   - ✓ 键盘快捷键支持
   - ✓ 日夜主题切换
 - **链接**: [访问项目](https://noahs-ielts-timer.vercel.app/) | [源码](https://github.com/XujunNoahWang/noahs-ielts-timer)
+
+### 3. 💭 Quote Card
+**无任何预设语录，只记录你真正喜欢的句子**
+- **技术栈**: HTML5, CSS3, JavaScript ES6+
+- **特色**: 苹果风格的个人语录管理应用，支持完整的导入导出功能
+- **核心功能**:
+  - ✓ 苹果风格设计与流畅动画
+  - ✓ 无预设语录，用户自建私人语录库
+  - ✓ 完整的语录管理功能
+  - ✓ 导入导出与云端同步
+  - ✓ 中英文双语支持
+  - ✓ 日夜主题切换
+- **链接**: [访问项目](https://quote-card-by-noah.vercel.app/) | [源码](https://github.com/XujunNoahWang/quote-card)
 
 ## 💻 开发指南
 
@@ -162,7 +176,7 @@ http://localhost:8000
 ### v2.0.0 (2025-06-15) - 重大更新
 - 🎉 **重大更新**: 完全重构滑动动画系统
 - ✨ **新增**: 苹果风格同步滑动效果
-- 🚀 **优化**: 性能提升50%，动画更流畅
+- �� **优化**: 性能提升50%，动画更流畅
 - 🔧 **修复**: 解决内容消失和动画冲突问题
 - 🎨 **改进**: 统一设计语言，优化视觉体验
 - 🧹 **清理**: 移除图标，简化界面布局
@@ -277,7 +291,8 @@ ProjectCard/
 └── 📁 src/
     └── snapshot/          # Project screenshots
         ├── AustinEnglish/
-        └── NoahsIELTSTimer/
+        ├── NoahsIELTSTimer/
+        └── QuoteCard/
 ```
 
 ## 🚀 Quick Start
@@ -310,7 +325,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Two carefully selected projects currently showcased:
+Three carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -335,6 +350,19 @@ Two carefully selected projects currently showcased:
   - ✓ Keyboard shortcut support
   - ✓ Day/night theme switching
 - **Links**: [Visit Project](https://noahs-ielts-timer.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/noahs-ielts-timer)
+
+### 3. 💭 Quote Card
+**No preset quotes, just record the sentences you really like**
+- **Tech Stack**: HTML5, CSS3, JavaScript ES6+
+- **Unique Feature**: Apple-style personal quote management application, supporting complete import/export functionality
+- **Core Functions**:
+  - ✓ Apple-style design and smooth animation
+  - ✓ No preset quotes, user-built private quote library
+  - ✓ Complete quote management functionality
+  - ✓ Import/export and cloud synchronization
+  - ✓ Bilingual support
+  - ✓ Day/night theme switching
+- **Links**: [Visit Project](https://quote-card-by-noah.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/quote-card)
 
 ## 💻 Development Guide
 

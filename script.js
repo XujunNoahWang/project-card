@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 2
+    TOTAL_PROJECTS: 3
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -57,9 +57,21 @@ const translations = {
         "ielts-feature5": "✓ 键盘快捷键支持",
         "ielts-feature6": "✓ 日夜主题切换",
         
+        // Quote Card
+        "quote-title": "Quote Card",
+        "quote-subtitle": "无任何预设语录，只记录你真正喜欢的句子。",
+        "quote-desc": "一个美观的苹果风格语录卡片应用，具备完整的管理功能和国际化支持。支持滑动浏览、语录管理、导入导出，以及云端备份同步功能。",
+        "quote-feature1": "✓ 苹果风格设计与流畅动画",
+        "quote-feature2": "✓ 无预设语录，用户自建私人语录库",
+        "quote-feature3": "✓ 完整的语录管理功能",
+        "quote-feature4": "✓ 导入导出与云端同步",
+        "quote-feature5": "✓ 中英文双语支持",
+        "quote-feature6": "✓ 日夜主题切换",
+        
         // Tags
         "tag-education": "教育",
-        "tag-productivity": "效率工具"
+        "tag-productivity": "效率工具",
+        "tag-lifestyle": "生活"
     },
     en: {
         title: "Project Card",
@@ -87,9 +99,21 @@ const translations = {
         "ielts-feature5": "✓ Keyboard Shortcuts Support",
         "ielts-feature6": "✓ Day/Night Mode Toggle",
         
+        // Quote Card
+        "quote-title": "Quote Card",
+        "quote-subtitle": "No preset quotes, only record the sentences you truly love.",
+        "quote-desc": "A beautiful Apple-inspired quote card application with internationalization and advanced management features. Supports swipe navigation, quote management, import/export, and cloud backup sync.",
+        "quote-feature1": "✓ Apple-style design with smooth animations",
+        "quote-feature2": "✓ No preset quotes, build your private quote library",
+        "quote-feature3": "✓ Complete quote management features",
+        "quote-feature4": "✓ Import/Export & cloud sync",
+        "quote-feature5": "✓ Chinese/English bilingual support",
+        "quote-feature6": "✓ Day/Night theme toggle",
+        
         // Tags
         "tag-education": "Education",
-        "tag-productivity": "Productivity"
+        "tag-productivity": "Productivity",
+        "tag-lifestyle": "Lifestyle"
     }
 };
 

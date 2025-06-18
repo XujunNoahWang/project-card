@@ -97,10 +97,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 100;
     backdrop-filter: blur(20px);
     background: var(--glass-bg);
-    border-bottom: 1px solid var(--glass-border);
     padding: var(--spacing-md) 0;
 }
 
@@ -991,7 +990,7 @@ a:focus {
     top: 85px; /* 减少顶部距离 */
     left: 50%;
     transform: translateX(-50%);
-    z-index: 200;
+    z-index: 150;
 }
 
 /* 桌面端样式 */
@@ -1010,7 +1009,7 @@ a:focus {
         position: absolute;
         top: var(--spacing-lg);
         right: var(--spacing-lg);
-        z-index: 100;
+        z-index: 150;
         background: var(--glass-bg);
         backdrop-filter: blur(20px);
         border: 1px solid var(--glass-border);
