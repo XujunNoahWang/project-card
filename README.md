@@ -11,7 +11,7 @@
 > **Noah的项目展示平台** - 采用苹果风格设计的响应式项目展示卡片
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-2.0-green)
+![Version](https://img.shields.io/badge/version-0.2-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ 特性亮点
@@ -173,20 +173,22 @@ http://localhost:8000
 
 ## 📈 版本历史
 
-### v2.0.0 (2025-06-15) - 重大更新
-- 🎉 **重大更新**: 完全重构滑动动画系统
-- ✨ **新增**: 苹果风格同步滑动效果
-- �� **优化**: 性能提升50%，动画更流畅
-- 🔧 **修复**: 解决内容消失和动画冲突问题
-- 🎨 **改进**: 统一设计语言，优化视觉体验
-- 🧹 **清理**: 移除图标，简化界面布局
-- 📱 **响应式**: 完善移动端适配
+### v0.2 (2025-06-19) - 功能扩展更新
+- 🎯 **新增项目**: 添加Quote Card - 苹果风格语录卡片应用
+- 📱 **移动端支持**: Austin English项目启用完整的移动端体验
+- 🖼️ **设备切换**: 所有项目现支持桌面端/移动端视图切换
+- 🎨 **UI优化**: 移除header边框，优化导航计数器层级
+- 📝 **内容更新**: 项目描述更加精准，去除过时的限制提示
+- 🔧 **体验改进**: 统一所有项目的交互体验和视觉一致性
 
-### v1.0.0 (初始版本)
-- 🎯 基础项目展示功能
-- 🌍 双语支持
-- 🎭 主题切换
-- 📱 响应式设计
+### v0.1 (2025-06-15) - 初始发布
+- 🎉 **核心功能**: 完全重构的苹果风格滑动动画系统
+- ✨ **动画效果**: 苹果风格同步滑动效果
+- 🚀 **性能优化**: 硬件加速，60fps流畅动画
+- 🌍 **双语支持**: 完整的中英文国际化
+- 🎭 **主题系统**: 日夜模式无缝切换
+- 📱 **响应式设计**: 完善的移动端适配
+- 🎯 **初始项目**: Austin English和IELTS Timer两个精选项目
 
 ## 🌟 特色功能
 
@@ -238,7 +240,7 @@ Made with ❤️ by Noah Wang
 > **Noah's Project Showcase Platform** - Responsive project showcase cards with Apple-style design
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-2.0-green)
+![Version](https://img.shields.io/badge/version-0.2-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ Feature Highlights
@@ -399,20 +401,22 @@ This project follows Apple's design philosophy:
 
 ## 📈 Version History
 
-### v2.0.0 (2025-06-15) - Major Update
-- 🎉 **Major Update**: Complete refactoring of sliding animation system
-- ✨ **New**: Apple-style synchronized sliding effects
-- 🚀 **Optimization**: 50% performance improvement, smoother animations
-- 🔧 **Fixed**: Resolved content disappearing and animation conflict issues
-- 🎨 **Improved**: Unified design language, optimized visual experience
-- 🧹 **Cleanup**: Removed icons, simplified interface layout
-- 📱 **Responsive**: Enhanced mobile adaptation
+### v0.2 (2025-06-19) - Feature Expansion Update
+- 🎯 **New Project**: Added Quote Card - Apple-style quote card application
+- 📱 **Mobile Support**: Austin English project now has full mobile experience
+- 🖼️ **Device Switching**: All projects now support desktop/mobile view switching
+- 🎨 **UI Optimization**: Removed header border, optimized navigation counter hierarchy
+- 📝 **Content Update**: More precise project descriptions, removed outdated limitation hints
+- 🔧 **Experience Improvement**: Unified interaction experience and visual consistency across all projects
 
-### v1.0.0 (Initial Release)
-- 🎯 Basic project showcase functionality
-- 🌍 Bilingual support
-- 🎭 Theme switching
-- 📱 Responsive design
+### v0.1 (2025-06-15) - Initial Release
+- 🎉 **Core Features**: Completely refactored Apple-style sliding animation system
+- ✨ **Animation Effects**: Apple-style synchronized sliding effects
+- 🚀 **Performance Optimization**: Hardware acceleration, 60fps smooth animations
+- 🌍 **Bilingual Support**: Complete Chinese/English internationalization
+- 🎭 **Theme System**: Seamless day/night mode switching
+- 📱 **Responsive Design**: Comprehensive mobile adaptation
+- 🎯 **Initial Projects**: Austin English and IELTS Timer two featured projects
 
 ## 🌟 Special Features
 
