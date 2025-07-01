@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 3
+    TOTAL_PROJECTS: 4
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -68,10 +68,22 @@ const translations = {
         "quote-feature5": "✓ 中英文双语支持",
         "quote-feature6": "✓ 日夜主题切换",
         
+        // Word Battle
+        "wordbattle-title": "Word Battle",
+        "wordbattle-subtitle": "多人在线单词图片匹配游戏平台",
+        "wordbattle-desc": "一个基于WebSocket的多人在线单词图片匹配游戏平台，支持多设备实时连接和房间管理。采用Apple设计语言，提供现代化和优雅的用户界面。",
+        "wordbattle-feature1": "✓ 多人实时对战系统",
+        "wordbattle-feature2": "✓ 智能房间管理",
+        "wordbattle-feature3": "✓ 密码保护的单词管理",
+        "wordbattle-feature4": "✓ 资源智能预加载",
+        "wordbattle-feature5": "✓ 中英文双语支持",
+        "wordbattle-feature6": "✓ 完美适配移动端",
+        
         // Tags
         "tag-education": "教育",
         "tag-productivity": "效率工具",
-        "tag-lifestyle": "生活"
+        "tag-lifestyle": "生活",
+        "tag-game": "游戏"
     },
     en: {
         title: "Project Card",
@@ -110,10 +122,22 @@ const translations = {
         "quote-feature5": "✓ Chinese/English bilingual support",
         "quote-feature6": "✓ Day/Night theme toggle",
         
+        // Word Battle
+        "wordbattle-title": "Word Battle",
+        "wordbattle-subtitle": "Multiplayer Online Word-Image Matching Game Platform",
+        "wordbattle-desc": "A WebSocket-based multiplayer online word-image matching game platform that supports real-time multi-device connections and room management. Featuring Apple design language for a modern and elegant user interface.",
+        "wordbattle-feature1": "✓ Real-time Multiplayer Battle System",
+        "wordbattle-feature2": "✓ Smart Room Management",
+        "wordbattle-feature3": "✓ Password-Protected Word Management",
+        "wordbattle-feature4": "✓ Intelligent Resource Preloading",
+        "wordbattle-feature5": "✓ Chinese/English Bilingual Support",
+        "wordbattle-feature6": "✓ Perfect Mobile Adaptation",
+        
         // Tags
         "tag-education": "Education",
         "tag-productivity": "Productivity",
-        "tag-lifestyle": "Lifestyle"
+        "tag-lifestyle": "Lifestyle",
+        "tag-game": "Game"
     }
 };
 

@@ -11,7 +11,7 @@
 > **Noah的项目展示平台** - 采用苹果风格设计的响应式项目展示卡片
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.2-green)
+![Version](https://img.shields.io/badge/version-0.3-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ 特性亮点
@@ -99,7 +99,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的三个精选项目：
+当前展示的四个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -138,6 +138,19 @@ http://localhost:8000
   - ✓ 日夜主题切换
 - **链接**: [访问项目](https://quote-card-by-noah.vercel.app/) | [源码](https://github.com/XujunNoahWang/quote-card)
 
+### 4. 🎮 Word Battle
+**多人在线单词图片匹配游戏平台**
+- **技术栈**: Node.js, Express, Socket.IO, HTML5, CSS3, JavaScript ES6+
+- **特色**: 基于WebSocket的多人在线游戏，支持实时对战和房间管理
+- **核心功能**: 
+  - ✓ 多人实时对战系统
+  - ✓ 智能房间管理
+  - ✓ 密码保护的单词管理
+  - ✓ 资源智能预加载
+  - ✓ 中英文双语支持
+  - ✓ 完美适配移动端
+- **链接**: [访问项目](https://wordbattle.up.railway.app/) | [源码](https://github.com/XujunNoahWang/word-battle)
+
 ## 💻 开发指南
 
 ### 代码规范
@@ -172,6 +185,14 @@ http://localhost:8000
 - **细节至上** - 精雕细琢每个交互细节
 
 ## 📈 版本历史
+
+### v0.3 (2025-07-01) - Word Battle更新
+- 🎮 **新增项目**: 添加Word Battle - 多人在线单词游戏平台
+- 🌐 **部署优化**: 使用Railway进行项目部署
+- 🎨 **UI优化**: 优化项目展示效果
+- 📱 **移动适配**: 完善所有项目的移动端体验
+- 🔄 **导航优化**: 更新项目导航计数器
+- 📝 **内容更新**: 更新项目描述和文档
 
 ### v0.2 (2025-06-19) - 功能扩展更新
 - 🎯 **新增项目**: 添加Quote Card - 苹果风格语录卡片应用
@@ -240,7 +261,7 @@ Made with ❤️ by Noah Wang
 > **Noah's Project Showcase Platform** - Responsive project showcase cards with Apple-style design
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.2-green)
+![Version](https://img.shields.io/badge/version-0.3-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ Feature Highlights
@@ -327,7 +348,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Three carefully selected projects currently showcased:
+Four carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -366,6 +387,19 @@ Three carefully selected projects currently showcased:
   - ✓ Day/night theme switching
 - **Links**: [Visit Project](https://quote-card-by-noah.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/quote-card)
 
+### 4. 🎮 Word Battle
+**Multiplayer Online Word Picture Matching Game Platform**
+- **Tech Stack**: Node.js, Express, Socket.IO, HTML5, CSS3, JavaScript ES6+
+- **Unique Feature**: Multiplayer online game based on WebSocket, supporting real-time battles and room management
+- **Core Functions**: 
+  - ✓ Multiplayer real-time battle system
+  - ✓ Intelligent room management
+  - ✓ Password-protected word management
+  - ✓ Resource intelligent preloading
+  - ✓ Bilingual support
+  - ✓ Perfect mobile adaptation
+- **Links**: [Visit Project](https://wordbattle.up.railway.app/) | [Source Code](https://github.com/XujunNoahWang/word-battle)
+
 ## 💻 Development Guide
 
 ### Code Standards
@@ -400,6 +434,14 @@ This project follows Apple's design philosophy:
 - **Details First** - Meticulously crafted interaction details
 
 ## 📈 Version History
+
+### v0.3 (2025-07-01) - Word Battle Update
+- 🎮 **New Project**: Added Word Battle - Multiplayer Online Word Picture Matching Game Platform
+- 🌐 **Deployment Optimization**: Used Railway for project deployment
+- 🎨 **UI Optimization**: Optimized project display effect
+- 📱 **Mobile Adaptation**: Perfect mobile experience for all projects
+- 🔄 **Navigation Optimization**: Updated project navigation counter
+- 📝 **Content Update**: Updated project description and documentation
 
 ### v0.2 (2025-06-19) - Feature Expansion Update
 - 🎯 **New Project**: Added Quote Card - Apple-style quote card application
