@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 4
+    TOTAL_PROJECTS: 5
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -36,6 +36,7 @@ const translations = {
         visit: "访问项目",
         "visit-desktop": "访问项目（请在电脑端体验）",
         source: "源码",
+        download: "下载应用",
         
         // Austin English
         "austin-title": "Austin English",
@@ -68,6 +69,16 @@ const translations = {
         "quote-feature5": "✓ 中英文双语支持",
         "quote-feature6": "✓ 日夜主题切换",
         
+        // MyTempo
+        "mytempo-title": "MyTempo",
+        "mytempo-subtitle": "专业的提词器工具",
+        "mytempo-desc": "MyTempo是一个专业的提词器工具，支持上传Markdown脚本文件，在优雅的浮动窗口中显示。窗口始终保持在最前方，让你在录制视频、直播或演讲时能够阅读脚本同时监控其他窗口。",
+        "mytempo-feature1": "✓ 支持Markdown格式脚本",
+        "mytempo-feature2": "✓ 浮动窗口始终置顶",
+        "mytempo-feature3": "✓ 可调节滚动速度和透明度",
+        "mytempo-feature4": "✓ 支持演示遥控器、键盘和鼠标控制",
+        "mytempo-feature5": "✓ 动态字体大小调整",
+        
         // Word Battle
         "wordbattle-title": "Word Battle",
         "wordbattle-subtitle": "多人在线单词图片匹配游戏平台",
@@ -90,6 +101,7 @@ const translations = {
         visit: "Visit Project",
         "visit-desktop": "Visit Project (Best on Desktop)",
         source: "Source Code",
+        download: "Download App",
         
         // Austin English
         "austin-title": "Austin English",
@@ -121,6 +133,16 @@ const translations = {
         "quote-feature4": "✓ Import/Export & cloud sync",
         "quote-feature5": "✓ Chinese/English bilingual support",
         "quote-feature6": "✓ Day/Night theme toggle",
+        
+        // MyTempo
+        "mytempo-title": "MyTempo",
+        "mytempo-subtitle": "Professional Teleprompter Tool",
+        "mytempo-desc": "MyTempo is a professional teleprompter tool that allows users to upload Markdown script files, displayed in an elegant floating window. The window stays on top of other applications, enabling you to read scripts while monitoring other windows during video recording, livestreaming, or presentations.",
+        "mytempo-feature1": "✓ Markdown Script Support",
+        "mytempo-feature2": "✓ Always-on-Top Floating Window",
+        "mytempo-feature3": "✓ Adjustable Scroll Speed & Transparency",
+        "mytempo-feature4": "✓ Presentation Remote, Keyboard & Mouse Control",
+        "mytempo-feature5": "✓ Dynamic Font Size Adjustment",
         
         // Word Battle
         "wordbattle-title": "Word Battle",

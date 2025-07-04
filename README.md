@@ -11,7 +11,7 @@
 > **Noah的项目展示平台** - 采用苹果风格设计的响应式项目展示卡片
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.3-green)
+![Version](https://img.shields.io/badge/version-0.4-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ 特性亮点
@@ -66,7 +66,9 @@ ProjectCard/
     └── snapshot/          # 项目截图
         ├── AustinEnglish/
         ├── NoahsIELTSTimer/
-        └── QuoteCard/
+        ├── QuoteCard/
+        ├── MyTempo/
+        └── WordBattle/
 ```
 
 ## 🚀 快速开始
@@ -99,7 +101,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的四个精选项目：
+当前展示的五个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -151,6 +153,18 @@ http://localhost:8000
   - ✓ 完美适配移动端
 - **链接**: [访问项目](https://wordbattle.up.railway.app/) | [源码](https://github.com/XujunNoahWang/word-battle)
 
+### 5. 🎤 MyTempo
+**专业的提词器工具**
+- **技术栈**: Python, tkinter, Markdown, 桌面应用
+- **特色**: 专业的提词器，支持浮动窗口始终置顶和Markdown脚本显示
+- **核心功能**: 
+  - ✓ 支持Markdown格式脚本
+  - ✓ 浮动窗口始终置顶
+  - ✓ 可调节滚动速度和透明度
+  - ✓ 支持演示遥控器、键盘和鼠标控制
+  - ✓ 动态字体大小调整
+- **链接**: [下载应用](https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe)
+
 ## 💻 开发指南
 
 ### 代码规范
@@ -185,6 +199,14 @@ http://localhost:8000
 - **细节至上** - 精雕细琢每个交互细节
 
 ## 📈 版本历史
+
+### v0.4 (2025-07-04) - MyTempo更新
+- 🎤 **新增项目**: 添加MyTempo - 专业的提词器工具
+- 🖥️ **桌面专用**: 项目组合中首个桌面专用应用
+- 🎨 **UI适配**: 为桌面专用项目优化设备切换界面
+- 🔄 **导航更新**: 项目计数器从4个更新为5个
+- 📝 **文档更新**: 更新README，添加MyTempo项目详情
+- 🔗 **下载链接**: 提供直接exe下载，优化用户体验
 
 ### v0.3 (2025-07-01) - Word Battle更新
 - 🎮 **新增项目**: 添加Word Battle - 多人在线单词游戏平台
@@ -261,7 +283,7 @@ Made with ❤️ by Noah Wang
 > **Noah's Project Showcase Platform** - Responsive project showcase cards with Apple-style design
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.3-green)
+![Version](https://img.shields.io/badge/version-0.4-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ Feature Highlights
@@ -315,7 +337,9 @@ ProjectCard/
     └── snapshot/          # Project screenshots
         ├── AustinEnglish/
         ├── NoahsIELTSTimer/
-        └── QuoteCard/
+        ├── QuoteCard/
+        ├── MyTempo/
+        └── WordBattle/
 ```
 
 ## 🚀 Quick Start
@@ -348,7 +372,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Four carefully selected projects currently showcased:
+Five carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -400,6 +424,18 @@ Four carefully selected projects currently showcased:
   - ✓ Perfect mobile adaptation
 - **Links**: [Visit Project](https://wordbattle.up.railway.app/) | [Source Code](https://github.com/XujunNoahWang/word-battle)
 
+### 5. 🎤 MyTempo
+**Professional Teleprompter Tool**
+- **Tech Stack**: Python, tkinter, Markdown, Desktop Application
+- **Unique Feature**: Professional teleprompter with always-on-top floating window and Markdown script support
+- **Core Functions**: 
+  - ✓ Markdown script support
+  - ✓ Always-on-top floating window
+  - ✓ Adjustable scroll speed & transparency
+  - ✓ Presentation remote, keyboard & mouse control
+  - ✓ Dynamic font size adjustment
+- **Links**: [Download App](https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe)
+
 ## 💻 Development Guide
 
 ### Code Standards
@@ -434,6 +470,14 @@ This project follows Apple's design philosophy:
 - **Details First** - Meticulously crafted interaction details
 
 ## 📈 Version History
+
+### v0.4 (2025-07-04) - MyTempo Update
+- 🎤 **New Project**: Added MyTempo - Professional Teleprompter Tool
+- 🖥️ **Desktop Focus**: First desktop-only application in the portfolio
+- 🎨 **UI Adaptation**: Optimized device switching for desktop-only projects
+- 🔄 **Navigation Update**: Updated project counter from 4 to 5 projects
+- 📝 **Documentation**: Updated README with MyTempo project details
+- 🔗 **Download Link**: Provided direct exe download for better user experience
 
 ### v0.3 (2025-07-01) - Word Battle Update
 - 🎮 **New Project**: Added Word Battle - Multiplayer Online Word Picture Matching Game Platform
