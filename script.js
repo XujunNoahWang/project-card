@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 5
+    TOTAL_PROJECTS: 6
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -24,9 +24,9 @@ const TOUCH_THRESHOLD = 50;
 
 // 添加性能检测
 const isHighPerformanceDevice = () => {
-    return navigator.hardwareConcurrency >= 4 && 
-           window.devicePixelRatio <= 2 &&
-           !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return navigator.hardwareConcurrency >= 4 &&
+        window.devicePixelRatio <= 2 &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 };
 
 // Language translations
@@ -37,7 +37,7 @@ const translations = {
         "visit-desktop": "访问项目（请在电脑端体验）",
         source: "源码",
         download: "下载应用",
-        
+
         // Austin English
         "austin-title": "Austin English",
         "austin-subtitle": "个性化英语复习工具",
@@ -46,7 +46,7 @@ const translations = {
         "austin-feature2": "✓ 配合任何英语课程",
         "austin-feature3": "✓ 智能音频与图片系统",
         "austin-feature4": "✓ 字母、单词、句子全方位练习",
-        
+
         // IELTS Timer
         "ielts-title": "Noah's IELTS Timer",
         "ielts-subtitle": "雅思考生为雅思考生设计的练习计时器",
@@ -57,7 +57,7 @@ const translations = {
         "ielts-feature4": "✓ 触控友好的移动界面",
         "ielts-feature5": "✓ 键盘快捷键支持",
         "ielts-feature6": "✓ 日夜主题切换",
-        
+
         // Quote Card
         "quote-title": "Quote Card",
         "quote-subtitle": "无任何预设语录，只记录你真正喜欢的句子。",
@@ -68,7 +68,7 @@ const translations = {
         "quote-feature4": "✓ 导入导出与云端同步",
         "quote-feature5": "✓ 中英文双语支持",
         "quote-feature6": "✓ 日夜主题切换",
-        
+
         // MyTempo
         "mytempo-title": "MyTempo",
         "mytempo-subtitle": "专业的提词器工具",
@@ -78,7 +78,7 @@ const translations = {
         "mytempo-feature3": "✓ 可调节滚动速度和透明度",
         "mytempo-feature4": "✓ 支持演示遥控器、键盘和鼠标控制",
         "mytempo-feature5": "✓ 动态字体大小调整",
-        
+
         // Word Battle
         "wordbattle-title": "Word Battle",
         "wordbattle-subtitle": "多人在线单词图片匹配游戏平台",
@@ -89,12 +89,24 @@ const translations = {
         "wordbattle-feature4": "✓ 资源智能预加载",
         "wordbattle-feature5": "✓ 中英文双语支持",
         "wordbattle-feature6": "✓ 完美适配移动端",
-        
+
+        // Prompt Grower
+        "promptgrower-title": "Prompt Grower",
+        "promptgrower-subtitle": "智能提示词生成器",
+        "promptgrower-desc": "通过9个精心设计的步骤，将模糊的想法转化为结构化的元提示词。发送给ChatGPT、Grok、Claude等AI工具生成企业级开发提示词，最终在Cursor、Claude Code、Kiro等AI IDE中实现代码生成和项目开发。",
+        "promptgrower-feature1": "✓ 9步渐进式需求收集",
+        "promptgrower-feature2": "✓ 多应用类型支持",
+        "promptgrower-feature3": "✓ 实时预览生成效果",
+        "promptgrower-feature4": "✓ 支持ChatGPT、Grok、Claude",
+        "promptgrower-feature5": "✓ 生成企业级提示词",
+        "promptgrower-feature6": "✓ 适配主流AI IDE",
+
         // Tags
         "tag-education": "教育",
         "tag-productivity": "效率工具",
         "tag-lifestyle": "生活",
-        "tag-game": "游戏"
+        "tag-game": "游戏",
+        "tag-ai": "AI工具"
     },
     en: {
         title: "Project Card",
@@ -102,7 +114,7 @@ const translations = {
         "visit-desktop": "Visit Project (Best on Desktop)",
         source: "Source Code",
         download: "Download App",
-        
+
         // Austin English
         "austin-title": "Austin English",
         "austin-subtitle": "Personalized English Review Tool",
@@ -111,7 +123,7 @@ const translations = {
         "austin-feature2": "✓ Works with any English course",
         "austin-feature3": "✓ Smart audio & image system",
         "austin-feature4": "✓ Letters, words, sentences practice",
-        
+
         // IELTS Timer
         "ielts-title": "Noah's IELTS Timer",
         "ielts-subtitle": "IELTS Practice Timer by IELTS Candidates",
@@ -122,7 +134,7 @@ const translations = {
         "ielts-feature4": "✓ Touch-friendly Mobile Interface",
         "ielts-feature5": "✓ Keyboard Shortcuts Support",
         "ielts-feature6": "✓ Day/Night Mode Toggle",
-        
+
         // Quote Card
         "quote-title": "Quote Card",
         "quote-subtitle": "No preset quotes, only record the sentences you truly love.",
@@ -133,7 +145,7 @@ const translations = {
         "quote-feature4": "✓ Import/Export & cloud sync",
         "quote-feature5": "✓ Chinese/English bilingual support",
         "quote-feature6": "✓ Day/Night theme toggle",
-        
+
         // MyTempo
         "mytempo-title": "MyTempo",
         "mytempo-subtitle": "Professional Teleprompter Tool",
@@ -143,7 +155,7 @@ const translations = {
         "mytempo-feature3": "✓ Adjustable Scroll Speed & Transparency",
         "mytempo-feature4": "✓ Presentation Remote, Keyboard & Mouse Control",
         "mytempo-feature5": "✓ Dynamic Font Size Adjustment",
-        
+
         // Word Battle
         "wordbattle-title": "Word Battle",
         "wordbattle-subtitle": "Multiplayer Online Word-Image Matching Game Platform",
@@ -154,12 +166,24 @@ const translations = {
         "wordbattle-feature4": "✓ Intelligent Resource Preloading",
         "wordbattle-feature5": "✓ Chinese/English Bilingual Support",
         "wordbattle-feature6": "✓ Perfect Mobile Adaptation",
-        
+
+        // Prompt Grower
+        "promptgrower-title": "Prompt Grower",
+        "promptgrower-subtitle": "Intelligent AI Prompt Generator",
+        "promptgrower-desc": "Transform vague ideas into structured meta-prompts through 9 carefully designed steps. Send to ChatGPT, Grok, Claude, and other AI tools to generate enterprise-grade development prompts, then use in Cursor, Claude Code, Kiro, and other AI IDEs for code generation and project development.",
+        "promptgrower-feature1": "✓ 9-step progressive requirement collection",
+        "promptgrower-feature2": "✓ Multi-application type support",
+        "promptgrower-feature3": "✓ Real-time preview generation",
+        "promptgrower-feature4": "✓ Supports ChatGPT, Grok, Claude",
+        "promptgrower-feature5": "✓ Generates enterprise-grade prompts",
+        "promptgrower-feature6": "✓ Compatible with mainstream AI IDEs",
+
         // Tags
         "tag-education": "Education",
         "tag-productivity": "Productivity",
         "tag-lifestyle": "Lifestyle",
-        "tag-game": "Game"
+        "tag-game": "Game",
+        "tag-ai": "AI Tool"
     }
 };
 
@@ -172,7 +196,7 @@ class ProjectCard {
         this.currentTheme = localStorage.getItem(STORAGE_KEYS.THEME) || DEFAULTS.THEME;
         this.currentProject = 0;
         this.isAnimating = false;
-        
+
         this.init();
     }
 
@@ -195,12 +219,12 @@ class ProjectCard {
      */
     initializeProjects() {
         const slides = document.querySelectorAll('.project-slide');
-        
+
         // 清理所有幻灯片状态
         slides.forEach((slide, index) => {
             slide.classList.remove('active', 'fade-in', 'fade-out');
             slide.style.cssText = ''; // 清理所有内联样式
-            
+
             if (index === this.currentProject) {
                 // 显示当前项目
                 slide.style.display = 'block';
@@ -214,10 +238,10 @@ class ProjectCard {
                 slide.style.transform = 'translateX(100%)';
             }
         });
-        
+
         // 预加载所有图片，特别是移动端图片
         this.preloadAllImages();
-        
+
         // 强制重排，确保状态生效
         document.body.offsetHeight;
     }
@@ -257,7 +281,7 @@ class ProjectCard {
     setupThemeSwitch() {
         const themeSwitch = document.getElementById('themeSwitch');
         const themeOptions = themeSwitch?.querySelectorAll('.theme-option');
-        
+
         themeOptions?.forEach(option => {
             option.addEventListener('click', () => {
                 const theme = option.getAttribute('data-theme');
@@ -274,7 +298,7 @@ class ProjectCard {
     setupLanguageSwitch() {
         const langSwitch = document.getElementById('langSwitch');
         const langOptions = langSwitch?.querySelectorAll('.lang-option');
-        
+
         langOptions?.forEach(option => {
             option.addEventListener('click', () => {
                 const lang = option.getAttribute('data-lang');
@@ -292,12 +316,12 @@ class ProjectCard {
         // Desktop navigation
         const navPrev = document.getElementById('navPrev');
         const navNext = document.getElementById('navNext');
-        
+
         navPrev?.addEventListener('click', (e) => {
             e.preventDefault();
             this.previousProject();
         });
-        
+
         navNext?.addEventListener('click', (e) => {
             e.preventDefault();
             this.nextProject();
@@ -306,14 +330,14 @@ class ProjectCard {
         // Mobile navigation
         const mobileNavPrevs = document.querySelectorAll('.mobile-nav-prev');
         const mobileNavNexts = document.querySelectorAll('.mobile-nav-next');
-        
+
         mobileNavPrevs.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.previousProject();
             });
         });
-        
+
         mobileNavNexts.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -340,37 +364,37 @@ class ProjectCard {
             startY = touch.clientY;
             isDragging = true;
             dragStartTime = Date.now();
-            
+
             // 添加视觉反馈
             slider.style.cursor = 'grabbing';
         };
 
         const touchMove = (e) => {
             if (!isDragging) return;
-            
+
             const touch = e.touches ? e.touches[0] : e;
             const deltaX = touch.clientX - startX;
             const deltaY = touch.clientY - startY;
-            
+
             // 只在水平滑动时阻止默认行为
             if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 e.preventDefault();
-                
+
                 // 添加实时视觉反馈（轻微的变换）
                 if (isHighPerformanceDevice()) {
                     const currentSlide = document.querySelector('.project-slide.active');
                     if (currentSlide && Math.abs(deltaX) > 20) {
                         const progress = Math.min(Math.abs(deltaX) / 200, 0.15);
                         const resistance = 0.3; // 苹果风格的阻力感
-                        
+
                         // 更细腻的实时反馈
                         const translateX = deltaX * resistance;
                         const scale = 1 - progress * 0.03;
                         const opacity = 1 - progress * 0.2;
-                        
+
                         currentSlide.style.transform = `translateX(${translateX}px) scale(${scale}) translateZ(0)`;
                         currentSlide.style.opacity = opacity;
-                        
+
                         // 添加轻微的阴影变化
                         currentSlide.style.filter = `brightness(${1 - progress * 0.1})`;
                     }
@@ -382,9 +406,9 @@ class ProjectCard {
             if (!isDragging) return;
             isDragging = false;
             dragStartTime = 0;
-            
+
             slider.style.cursor = '';
-            
+
             // 重置任何实时变换
             const currentSlide = document.querySelector('.project-slide.active');
             if (currentSlide) {
@@ -393,7 +417,7 @@ class ProjectCard {
                 currentSlide.style.transform = '';
                 currentSlide.style.opacity = '';
                 currentSlide.style.filter = '';
-                
+
                 // 清理过渡效果
                 setTimeout(() => {
                     if (currentSlide.style.transition) {
@@ -411,7 +435,7 @@ class ProjectCard {
             const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY);
             const isSignificantSwipe = Math.abs(deltaX) > TOUCH_THRESHOLD;
             const isFastSwipe = swipeTime < 300 && Math.abs(deltaX) > 30;
-            
+
             if (isHorizontalSwipe && (isSignificantSwipe || isFastSwipe)) {
                 // 苹果风格的滑动逻辑：
                 // 向右滑动（deltaX > 0）= 显示上一个项目（从左侧滑入）
@@ -428,12 +452,12 @@ class ProjectCard {
         slider.addEventListener('touchstart', touchStart, { passive: false });
         slider.addEventListener('touchmove', touchMove, { passive: false });
         slider.addEventListener('touchend', touchEnd, { passive: false });
-        
+
         // 鼠标事件支持
         slider.addEventListener('mousedown', touchStart);
         slider.addEventListener('mousemove', touchMove);
         slider.addEventListener('mouseup', touchEnd);
-        
+
         // 防止拖拽时的文本选择
         slider.addEventListener('selectstart', (e) => {
             if (isDragging) e.preventDefault();
@@ -446,7 +470,7 @@ class ProjectCard {
     setupKeyboardNavigation() {
         document.addEventListener('keydown', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-            
+
             switch (e.key) {
                 case 'ArrowLeft':
                     e.preventDefault();
@@ -474,13 +498,13 @@ class ProjectCard {
      */
     loadTheme() {
         document.documentElement.setAttribute('data-theme', this.currentTheme);
-        
+
         const themeOptions = document.querySelectorAll('.theme-option');
         themeOptions.forEach(option => {
             const isActive = option.getAttribute('data-theme') === this.currentTheme;
             option.classList.toggle('active', isActive);
         });
-        
+
         const themeSwitch = document.getElementById('themeSwitch');
         if (themeSwitch) {
             themeSwitch.setAttribute('data-active', this.currentTheme);
@@ -501,18 +525,18 @@ class ProjectCard {
      */
     loadLanguage() {
         document.documentElement.setAttribute('lang', this.currentLang === 'zh' ? 'zh-CN' : 'en');
-        
+
         const langOptions = document.querySelectorAll('.lang-option');
         langOptions.forEach(option => {
             const isActive = option.getAttribute('data-lang') === this.currentLang;
             option.classList.toggle('active', isActive);
         });
-        
+
         const langSwitch = document.getElementById('langSwitch');
         if (langSwitch) {
             langSwitch.setAttribute('data-active', this.currentLang);
         }
-        
+
         this.updateTranslations();
     }
 
@@ -522,7 +546,7 @@ class ProjectCard {
     updateTranslations() {
         const elements = document.querySelectorAll('[data-i18n]');
         const currentTranslations = translations[this.currentLang];
-        
+
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (currentTranslations[key]) {
@@ -556,17 +580,17 @@ class ProjectCard {
         if (this.isAnimating || index === this.currentProject || index < 0 || index >= DEFAULTS.TOTAL_PROJECTS) {
             return;
         }
-        
+
         this.isAnimating = true;
         const previousIndex = this.currentProject;
         this.currentProject = index;
-        
+
         // 立即更新导航状态
         this.updateNavigationState();
-        
+
         // 执行动画
         this.updateProjectDisplayAppleStyle(previousIndex, index, direction);
-        
+
         // 确保动画完成后解锁
         setTimeout(() => {
             this.isAnimating = false;
@@ -580,16 +604,16 @@ class ProjectCard {
         const slides = document.querySelectorAll('.project-slide');
         const currentSlide = slides[fromIndex];
         const nextSlide = slides[toIndex];
-        
+
         if (!nextSlide || !currentSlide) return;
-        
+
         // 苹果风格的缓动函数
         const appleEasing = 'cubic-bezier(0.25, 0.1, 0.25, 1)';
-        
+
         // 确定滑动方向
         const slideInDirection = direction === 'left' ? '100%' : '-100%';
         const slideOutDirection = direction === 'left' ? '-100%' : '100%';
-        
+
         // 先清理所有可能的残留样式
         slides.forEach(slide => {
             if (slide !== currentSlide && slide !== nextSlide) {
@@ -597,38 +621,38 @@ class ProjectCard {
                 slide.classList.remove('active');
             }
         });
-        
+
         // 准备下一个幻灯片（但不显示）
         nextSlide.style.display = 'block';
         nextSlide.style.opacity = '1';
         nextSlide.style.transform = `translateX(${slideInDirection}) translateZ(0)`;
         nextSlide.style.willChange = 'transform';
         // 注意：不要在这里就设置active类
-        
+
         // 准备当前幻灯片
         currentSlide.style.willChange = 'transform, opacity';
-        
+
         // 强制重排，确保初始状态生效
         nextSlide.offsetHeight;
-        
+
         // 开始同步动画
         requestAnimationFrame(() => {
             // 当前幻灯片滑出
             currentSlide.style.transition = `transform ${ANIMATION_DURATION}ms ${appleEasing}, opacity ${ANIMATION_DURATION * 0.8}ms ease-out`;
             currentSlide.style.transform = `translateX(${slideOutDirection}) translateZ(0)`;
             currentSlide.style.opacity = '0';
-            
+
             // 新幻灯片滑入
             nextSlide.style.transition = `transform ${ANIMATION_DURATION}ms ${appleEasing}`;
             nextSlide.style.transform = 'translateX(0) translateZ(0)';
         });
-        
+
         // 在动画进行中更新active状态
         setTimeout(() => {
             currentSlide.classList.remove('active');
             nextSlide.classList.add('active');
         }, ANIMATION_DURATION / 2);
-        
+
         // 动画完成后清理
         setTimeout(() => {
             // 隐藏旧幻灯片
@@ -637,12 +661,12 @@ class ProjectCard {
             currentSlide.style.transform = '';
             currentSlide.style.opacity = '';
             currentSlide.style.willChange = 'auto';
-            
+
             // 清理新幻灯片的临时样式
             nextSlide.style.transition = '';
             nextSlide.style.transform = '';
             nextSlide.style.willChange = 'auto';
-            
+
             // 确保只有当前幻灯片可见
             slides.forEach((slide, index) => {
                 if (index === toIndex) {
@@ -664,7 +688,7 @@ class ProjectCard {
     updateNavigationState() {
         const counters = document.querySelectorAll('.counter-text');
         const currentDisplay = `${this.currentProject + 1}/${DEFAULTS.TOTAL_PROJECTS}`;
-        
+
         counters.forEach(counter => {
             counter.textContent = currentDisplay;
         });
@@ -675,16 +699,16 @@ class ProjectCard {
      */
     setupDeviceIcons() {
         const deviceIcons = document.querySelectorAll('.device-icons');
-        
+
         deviceIcons.forEach(iconGroup => {
             const icons = iconGroup.querySelectorAll('.device-icon:not(.disabled)');
-            
+
             icons.forEach(icon => {
                 icon.addEventListener('click', () => {
                     const device = icon.getAttribute('data-device');
                     const projectSlide = icon.closest('.project-slide');
                     const projectType = projectSlide.getAttribute('data-project');
-                    
+
                     this.switchDeviceView(projectType, device, icon);
                 });
             });
@@ -697,27 +721,27 @@ class ProjectCard {
     switchDeviceView(projectType, device, clickedIcon) {
         const iconGroup = clickedIcon.closest('.device-icons');
         const screenshotContainer = iconGroup.parentElement.querySelector('.screenshot-container');
-        
+
         // Update active icon
         iconGroup.querySelectorAll('.device-icon').forEach(icon => {
             icon.classList.remove('active');
         });
         clickedIcon.classList.add('active');
-        
+
         // Update indicator position
         iconGroup.setAttribute('data-active', device);
-        
+
         // Switch screenshots
         const desktopScreenshot = screenshotContainer.querySelector('.desktop-screenshot');
         const mobileScreenshots = screenshotContainer.querySelector('.mobile-screenshots');
-        
+
         if (device === 'desktop') {
             desktopScreenshot?.classList.add('active');
             mobileScreenshots?.classList.remove('active');
         } else {
             desktopScreenshot?.classList.remove('active');
             mobileScreenshots?.classList.add('active');
-            
+
             // 确保移动端图片正确加载
             this.ensureMobileImagesLoaded(mobileScreenshots);
         }
@@ -728,7 +752,7 @@ class ProjectCard {
      */
     ensureMobileImagesLoaded(mobileScreenshots) {
         if (!mobileScreenshots) return;
-        
+
         const mobileImages = mobileScreenshots.querySelectorAll('.mobile-screenshot');
         mobileImages.forEach(img => {
             if (!img.complete || img.naturalHeight === 0) {

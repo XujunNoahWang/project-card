@@ -68,7 +68,8 @@ ProjectCard/
         ├── NoahsIELTSTimer/
         ├── QuoteCard/
         ├── MyTempo/
-        └── WordBattle/
+        ├── WordBattle/
+        └── PromptGrower/
 ```
 
 ## 🚀 快速开始
@@ -101,7 +102,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的五个精选项目：
+当前展示的六个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -165,6 +166,19 @@ http://localhost:8000
   - ✓ 动态字体大小调整
 - **链接**: [下载应用](https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe)
 
+### 6. 🌱 Prompt Grower
+**智能提示词生成器**
+- **技术栈**: React 18, TypeScript, Zustand, Tailwind CSS, Vite
+- **特色**: 通过9个精心设计的步骤，将模糊的想法转化为结构化的元提示词，发送给ChatGPT、Grok、Claude等AI工具生成企业级开发提示词，最终在AI IDE中实现代码生成
+- **核心功能**: 
+  - ✓ 9步渐进式需求收集，覆盖项目全生命周期
+  - ✓ 多应用类型支持（Web、桌面、移动、CLI等）
+  - ✓ 实时预览生成的元提示词效果
+  - ✓ 支持ChatGPT、Grok、Claude等主流AI工具
+  - ✓ 生成企业级开发提示词
+  - ✓ 适配Cursor、Claude Code、Kiro等AI IDE
+- **链接**: [访问项目](https://promptgrower.vercel.app/) | [源码](https://github.com/XujunNoahWang/promptgrower)
+
 ## 💻 开发指南
 
 ### 代码规范
@@ -199,6 +213,24 @@ http://localhost:8000
 - **细节至上** - 精雕细琢每个交互细节
 
 ## 📈 版本历史
+
+### v0.6 (2025-07-20) - Prompt Grower更新
+- 🌱 **新增项目**: 添加Prompt Grower - 智能提示词生成器
+- 🤖 **AI工作流**: 支持ChatGPT、Grok、Claude等主流AI工具
+- 📋 **企业级提示词**: 生成开发就绪的详细指令
+- 🦾 **AI IDE集成**: 适配Cursor、Claude Code、Kiro等AI IDE
+- 🎨 **现代技术栈**: 采用React 18 + TypeScript + Tailwind CSS
+- 🔄 **导航更新**: 项目计数器从5个更新为6个
+- 📝 **文档更新**: 更新README，添加Prompt Grower项目详情
+- 🌐 **在线体验**: 提供完整的Web应用体验
+
+### v0.5 (2025-07-04) - MyTempo更新
+- 🌱 **新增项目**: 添加Prompt Grower - 智能提示词生成器
+- 🤖 **AI工具**: 项目组合中首个专门的AI辅助开发工具
+- 🎨 **现代技术栈**: 采用React 18 + TypeScript + Tailwind CSS
+- 🔄 **导航更新**: 项目计数器从5个更新为6个
+- 📝 **文档更新**: 更新README，添加Prompt Grower项目详情
+- 🌐 **在线体验**: 提供完整的Web应用体验
 
 ### v0.4 (2025-07-04) - MyTempo更新
 - 🎤 **新增项目**: 添加MyTempo - 专业的提词器工具
@@ -339,7 +371,8 @@ ProjectCard/
         ├── NoahsIELTSTimer/
         ├── QuoteCard/
         ├── MyTempo/
-        └── WordBattle/
+        ├── WordBattle/
+        └── PromptGrower/
 ```
 
 ## 🚀 Quick Start
@@ -372,7 +405,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Five carefully selected projects currently showcased:
+Six carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -436,6 +469,19 @@ Five carefully selected projects currently showcased:
   - ✓ Dynamic font size adjustment
 - **Links**: [Download App](https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe)
 
+### 6. 🌱 Prompt Grower
+**Intelligent AI Prompt Generator**
+- **Tech Stack**: React 18, TypeScript, Zustand, Tailwind CSS, Vite
+- **Unique Feature**: Transform vague ideas into structured, executable development prompts through 9 carefully designed steps
+- **Core Functions**: 
+  - ✓ 9-Step Progressive Requirement Collection
+  - ✓ Multi-Application Type Support
+  - ✓ Real-time Preview Generation
+  - ✓ Dark Mode Support
+  - ✓ Local Data Persistence
+  - ✓ Responsive Design
+- **Links**: [Visit Project](https://promptgrower.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/promptgrower)
+
 ## 💻 Development Guide
 
 ### Code Standards
@@ -470,6 +516,14 @@ This project follows Apple's design philosophy:
 - **Details First** - Meticulously crafted interaction details
 
 ## 📈 Version History
+
+### v0.5 (2025-07-20) - Prompt Grower Update
+- 🌱 **New Project**: Added Prompt Grower - Intelligent AI Prompt Generator
+- 🤖 **AI Tool**: First dedicated AI-assisted development tool in the portfolio
+- 🎨 **Modern Tech Stack**: Built with React 18 + TypeScript + Tailwind CSS
+- 🔄 **Navigation Update**: Updated project counter from 5 to 6 projects
+- 📝 **Documentation**: Updated README with Prompt Grower project details
+- 🌐 **Online Experience**: Provides complete web application experience
 
 ### v0.4 (2025-07-04) - MyTempo Update
 - 🎤 **New Project**: Added MyTempo - Professional Teleprompter Tool
