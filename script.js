@@ -106,7 +106,14 @@ const translations = {
         "tag-productivity": "效率工具",
         "tag-lifestyle": "生活",
         "tag-game": "游戏",
-        "tag-ai": "AI工具"
+        "tag-ai": "AI工具",
+
+        // New features
+        "search-placeholder": "搜索项目...",
+        "share": "分享",
+        "copy-link": "复制链接",
+        "link-copied": "链接已复制！",
+        "share-project": "分享项目"
     },
     en: {
         title: "Project Card",
@@ -183,7 +190,14 @@ const translations = {
         "tag-productivity": "Productivity",
         "tag-lifestyle": "Lifestyle",
         "tag-game": "Game",
-        "tag-ai": "AI Tool"
+        "tag-ai": "AI Tool",
+
+        // New features
+        "search-placeholder": "Search projects...",
+        "share": "Share",
+        "copy-link": "Copy Link",
+        "link-copied": "Link copied!",
+        "share-project": "Share Project"
     }
 };
 
@@ -209,8 +223,11 @@ class ProjectCard {
         this.loadLanguage();
         this.setupTouchEvents();
         this.setupKeyboardNavigation();
+        this.setupRouting();
         this.initializeProjects();
         this.setupDeviceIcons();
+        this.setupSearch();
+        this.setupShare();
         this.updateNavigationState();
     }
 
@@ -247,16 +264,40 @@ class ProjectCard {
     }
 
     /**
-     * Preload all project images
+     * Preload all project images with lazy loading
      */
     preloadAllImages() {
-        const allImages = document.querySelectorAll('.project-screenshot');
-        allImages.forEach(img => {
-            // 确保图片能正确加载
-            if (img.src && !img.complete) {
+        // 立即加载当前项目的图片
+        this.loadProjectImages(this.currentProject);
+        
+        // 预加载下一个和上一个项目的图片
+        const nextIndex = (this.currentProject + 1) % DEFAULTS.TOTAL_PROJECTS;
+        const prevIndex = (this.currentProject - 1 + DEFAULTS.TOTAL_PROJECTS) % DEFAULTS.TOTAL_PROJECTS;
+        
+        setTimeout(() => {
+            this.loadProjectImages(nextIndex);
+            this.loadProjectImages(prevIndex);
+        }, 500);
+    }
+
+    /**
+     * Load images for specific project
+     */
+    loadProjectImages(projectIndex) {
+        const slides = document.querySelectorAll('.project-slide');
+        const targetSlide = slides[projectIndex];
+        if (!targetSlide) return;
+
+        const images = targetSlide.querySelectorAll('.project-screenshot');
+        images.forEach(img => {
+            if (img.dataset.src && !img.src) {
+                // 懒加载图片
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            } else if (img.src && !img.complete) {
+                // 确保图片能正确加载
                 const tempImg = new Image();
                 tempImg.onload = () => {
-                    // 图片加载完成后，确保原图片显示正确
                     if (!img.complete) {
                         img.src = tempImg.src;
                     }
@@ -465,11 +506,14 @@ class ProjectCard {
     }
 
     /**
-     * Setup keyboard navigation
+     * Setup keyboard navigation (only arrow keys)
      */
     setupKeyboardNavigation() {
         document.addEventListener('keydown', (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            // Don't interfere with input fields
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                return;
+            }
 
             switch (e.key) {
                 case 'ArrowLeft':
@@ -482,6 +526,98 @@ class ProjectCard {
                     break;
             }
         });
+    }
+
+    /**
+     * Clear search
+     */
+    clearSearch() {
+        const searchInput = document.getElementById('projectSearch');
+        const searchClear = document.getElementById('searchClear');
+        
+        if (searchInput) {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            this.searchProjects('');
+        }
+    }
+
+    /**
+     * Setup URL routing
+     */
+    setupRouting() {
+        // Handle initial hash
+        this.handleHashChange();
+        
+        // Listen for hash changes
+        window.addEventListener('hashchange', () => {
+            this.handleHashChange();
+        });
+    }
+
+    /**
+     * Handle hash change for routing
+     */
+    handleHashChange() {
+        const hash = window.location.hash.slice(1); // Remove #
+        
+        if (hash) {
+            const projectIndex = this.getProjectIndexById(hash);
+            if (projectIndex !== -1 && projectIndex !== this.currentProject) {
+                this.goToProject(projectIndex);
+            }
+        }
+    }
+
+    /**
+     * Get project index by ID
+     */
+    getProjectIndexById(projectId) {
+        const projectIds = [
+            'austin-english',
+            'ielts-timer', 
+            'quote-card',
+            'word-battle',
+            'mytempo',
+            'promptgrower'
+        ];
+        
+        return projectIds.indexOf(projectId);
+    }
+
+    /**
+     * Update URL hash when project changes
+     */
+    updateUrlHash() {
+        const projectIds = [
+            'austin-english',
+            'ielts-timer',
+            'quote-card', 
+            'word-battle',
+            'mytempo',
+            'promptgrower'
+        ];
+        
+        const currentProjectId = projectIds[this.currentProject];
+        if (currentProjectId) {
+            // Update hash without triggering hashchange event
+            history.replaceState(null, null, `#${currentProjectId}`);
+        }
+    }
+
+    /**
+     * Handle resize events
+     */
+    handleResize() {
+        // Recalculate any size-dependent elements
+        this.updateNavigationState();
+        
+        // Ensure current project is properly displayed
+        const currentSlide = document.querySelector('.project-slide.active');
+        if (currentSlide) {
+            currentSlide.style.transform = '';
+            currentSlide.style.opacity = '1';
+        }
     }
 
     /**
@@ -538,6 +674,7 @@ class ProjectCard {
         }
 
         this.updateTranslations();
+        this.updateSearchPlaceholder();
     }
 
     /**
@@ -585,8 +722,14 @@ class ProjectCard {
         const previousIndex = this.currentProject;
         this.currentProject = index;
 
+        // Update URL hash
+        this.updateUrlHash();
+
         // 立即更新导航状态
         this.updateNavigationState();
+
+        // 预加载目标项目图片
+        this.loadProjectImages(index);
 
         // 执行动画
         this.updateProjectDisplayAppleStyle(previousIndex, index, direction);
@@ -695,6 +838,189 @@ class ProjectCard {
     }
 
     /**
+     * Setup search functionality
+     */
+    setupSearch() {
+        const searchInput = document.getElementById('projectSearch');
+        const searchClear = document.getElementById('searchClear');
+        
+        if (!searchInput) return;
+
+        let searchTimeout;
+        
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            
+            // Show/hide clear button
+            searchClear.style.display = query ? 'flex' : 'none';
+            
+            // Debounce search
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                this.searchProjects(query);
+            }, 300);
+        });
+
+        searchClear?.addEventListener('click', () => {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            this.searchProjects('');
+            searchInput.focus();
+        });
+
+        // Update placeholder on language change
+        this.updateSearchPlaceholder();
+    }
+
+    /**
+     * Search projects functionality
+     */
+    searchProjects(query) {
+        if (!query) {
+            // Show all projects
+            this.showAllProjects();
+            return;
+        }
+
+        const slides = document.querySelectorAll('.project-slide');
+        const matchingProjects = [];
+
+        slides.forEach((slide, index) => {
+            const title = slide.querySelector('.project-title')?.textContent || '';
+            const subtitle = slide.querySelector('.project-subtitle')?.textContent || '';
+            const description = slide.querySelector('.description-text')?.textContent || '';
+            
+            const isMatch = title.toLowerCase().includes(query.toLowerCase()) ||
+                           subtitle.toLowerCase().includes(query.toLowerCase()) ||
+                           description.toLowerCase().includes(query.toLowerCase());
+            
+            if (isMatch) {
+                matchingProjects.push(index);
+            }
+        });
+
+        if (matchingProjects.length > 0) {
+            // Go to first matching project
+            this.goToProject(matchingProjects[0]);
+        }
+    }
+
+    /**
+     * Show all projects (reset search)
+     */
+    showAllProjects() {
+        // Reset to current project display
+        this.initializeProjects();
+    }
+
+    /**
+     * Update search placeholder text
+     */
+    updateSearchPlaceholder() {
+        const searchInput = document.getElementById('projectSearch');
+        if (searchInput) {
+            const placeholder = translations[this.currentLang]['search-placeholder'];
+            searchInput.placeholder = placeholder;
+        }
+    }
+
+
+
+    /**
+     * Setup share functionality
+     */
+    setupShare() {
+        const shareButtons = document.querySelectorAll('.btn-share');
+        
+        shareButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = button.getAttribute('data-project');
+                this.shareProject(projectId);
+            });
+        });
+    }
+
+    /**
+     * Share project functionality
+     */
+    async shareProject(projectId) {
+        const currentUrl = window.location.href;
+        const shareUrl = `${currentUrl}#${projectId}`;
+        const shareText = translations[this.currentLang]['share-project'];
+        
+        if (navigator.share) {
+            // Use native share API if available
+            try {
+                await navigator.share({
+                    title: `${shareText} - ${projectId}`,
+                    url: shareUrl
+                });
+            } catch (err) {
+                console.log('Share cancelled');
+            }
+        } else {
+            // Fallback to clipboard
+            try {
+                await navigator.clipboard.writeText(shareUrl);
+                this.showToast(translations[this.currentLang]['link-copied']);
+            } catch (err) {
+                // Fallback for older browsers
+                this.fallbackCopyToClipboard(shareUrl);
+            }
+        }
+    }
+
+    /**
+     * Fallback copy to clipboard
+     */
+    fallbackCopyToClipboard(text) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            this.showToast(translations[this.currentLang]['link-copied']);
+        } catch (err) {
+            console.error('Failed to copy');
+        }
+        
+        document.body.removeChild(textArea);
+    }
+
+    /**
+     * Show toast notification
+     */
+    showToast(message) {
+        // Remove existing toast
+        const existingToast = document.querySelector('.toast');
+        if (existingToast) {
+            existingToast.remove();
+        }
+
+        // Create toast
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Show toast
+        setTimeout(() => toast.classList.add('show'), 100);
+        
+        // Hide toast
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 2000);
+    }
+
+    /**
      * Setup device icons functionality
      */
     setupDeviceIcons() {
@@ -706,10 +1032,7 @@ class ProjectCard {
             icons.forEach(icon => {
                 icon.addEventListener('click', () => {
                     const device = icon.getAttribute('data-device');
-                    const projectSlide = icon.closest('.project-slide');
-                    const projectType = projectSlide.getAttribute('data-project');
-
-                    this.switchDeviceView(projectType, device, icon);
+                    this.switchDeviceView(device, icon);
                 });
             });
         });
@@ -718,7 +1041,7 @@ class ProjectCard {
     /**
      * Switch device view (desktop/mobile)
      */
-    switchDeviceView(projectType, device, clickedIcon) {
+    switchDeviceView(device, clickedIcon) {
         const iconGroup = clickedIcon.closest('.device-icons');
         const screenshotContainer = iconGroup.parentElement.querySelector('.screenshot-container');
 
@@ -765,14 +1088,108 @@ class ProjectCard {
     }
 }
 
+/**
+ * Performance monitoring and error handling
+ */
+class PerformanceMonitor {
+    constructor() {
+        this.metrics = {
+            loadTime: 0,
+            animationFrames: 0,
+            errors: []
+        };
+        this.init();
+    }
+
+    init() {
+        // Monitor page load time
+        window.addEventListener('load', () => {
+            this.metrics.loadTime = performance.now();
+            console.log(`Page loaded in ${this.metrics.loadTime.toFixed(2)}ms`);
+        });
+
+        // Monitor errors
+        window.addEventListener('error', (e) => {
+            this.metrics.errors.push({
+                message: e.message,
+                filename: e.filename,
+                lineno: e.lineno,
+                timestamp: Date.now()
+            });
+            console.error('JavaScript error:', e);
+        });
+
+        // Monitor unhandled promise rejections
+        window.addEventListener('unhandledrejection', (e) => {
+            this.metrics.errors.push({
+                message: e.reason,
+                type: 'promise',
+                timestamp: Date.now()
+            });
+            console.error('Unhandled promise rejection:', e.reason);
+        });
+    }
+
+    getMetrics() {
+        return this.metrics;
+    }
+}
+
 // Initialize application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new ProjectCard();
+    try {
+        // Initialize performance monitoring
+        const monitor = new PerformanceMonitor();
+        
+        // Initialize main application
+        const app = new ProjectCard();
+        
+        // Make app globally accessible for debugging
+        window.projectCard = app;
+        window.performanceMonitor = monitor;
+        
+        console.log('Project Card initialized successfully');
+    } catch (error) {
+        console.error('Failed to initialize Project Card:', error);
+        
+        // Show fallback error message
+        document.body.innerHTML = `
+            <div style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                text-align: center;
+                color: #666;
+            ">
+                <div>
+                    <h1>加载失败</h1>
+                    <p>请刷新页面重试</p>
+                    <button onclick="location.reload()" style="
+                        padding: 8px 16px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        background: #f8f9fa;
+                        cursor: pointer;
+                    ">刷新页面</button>
+                </div>
+            </div>
+        `;
+    }
 });
 
 // Add resize event listener for responsive adjustments
+let resizeTimeout;
 window.addEventListener('resize', () => {
-    // Handle any resize-specific logic here if needed
+    // Debounce resize events
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        if (window.projectCard) {
+            // Trigger any resize-specific logic
+            window.projectCard.handleResize?.();
+        }
+    }, 250);
 });
 
 // Add intersection observer for scroll animations

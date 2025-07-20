@@ -1,22 +1,92 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Noah的项目展示卡片 - Austin English个性化英语复习工具、IELTS Timer雅思练习计时器、Quote Card语录卡片和Word Battle多人在线单词游戏">
+    <meta name="description"
+        content="Noah的项目展示卡片 - Austin English个性化英语复习工具、IELTS Timer雅思练习计时器、Quote Card语录卡片和Word Battle多人在线单词游戏">
     <meta name="keywords" content="项目展示,Austin English,IELTS Timer,Quote Card,Word Battle,英语学习,雅思计时器,语录卡片,单词游戏">
     <meta name="author" content="Noah Wang">
     <title>Project Card - Noah's Portfolio</title>
-    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Project Card - Noah's Portfolio">
+    <meta property="og:description" content="Noah的项目展示平台，展示Austin English、IELTS Timer、Quote Card等精选项目">
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Project Card - Noah's Portfolio">
+    <meta property="twitter:description" content="Noah的项目展示平台，展示Austin English、IELTS Timer、Quote Card等精选项目">
+    <meta property="twitter:image" content="https://your-domain.com/og-image.jpg">
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://your-domain.com/">
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Configuration -->
+    <script src="config.js"></script>
+
     <!-- Favicon -->
-    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"> -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007aff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Project Card">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Noah Wang",
+        "url": "https://your-domain.com",
+        "sameAs": [
+            "https://www.linkedin.com/in/xujunnoahwang/",
+            "https://github.com/XujunNoahWang"
+        ],
+        "jobTitle": "Software Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Independent"
+        },
+        "knowsAbout": [
+            "JavaScript",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Web Development",
+            "UI/UX Design"
+        ],
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://your-domain.com"
+        }
+    }
+    </script>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -24,7 +94,8 @@
             <div class="logo-section">
                 <div class="title-line">
                     <h1 class="logo" data-i18n="title">Project Card</h1>
-                    <a href="https://www.linkedin.com/in/xujunnoahwang/" target="_blank" rel="noopener noreferrer" class="author-link">
+                    <a href="https://www.linkedin.com/in/xujunnoahwang/" target="_blank" rel="noopener noreferrer"
+                        class="author-link">
                         <span class="by-text">by</span>
                         <span class="author-name">Noah</span>
                     </a>
@@ -32,6 +103,18 @@
                 <div class="update-date">(updated 2025/7/20)</div>
             </div>
             <div class="controls">
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" id="projectSearch" class="search-input" placeholder="搜索项目..."
+                        data-i18n-placeholder="search-placeholder">
+                    <button class="search-clear" id="searchClear" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
                 <!-- Theme Switch -->
                 <div class="theme-switch" id="themeSwitch">
                     <button class="theme-option active" data-theme="light" aria-label="Light theme">
@@ -60,6 +143,8 @@
                 <span class="counter-text">1/6</span>
             </div>
 
+
+
             <!-- Fixed Mobile Navigation -->
             <nav class="fixed-mobile-navigation" aria-label="Project navigation">
                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
@@ -87,7 +172,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -95,45 +181,46 @@
                                     <span class="counter-text">1/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
                                 <button class="device-icon mobile-icon" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/AustinEnglish/AustinEnglish_desktop.png" 
-                                     alt="Austin English桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/AustinEnglish/AustinEnglish_desktop.png"
+                                    alt="Austin English桌面版界面截图" class="project-screenshot desktop-screenshot active"
+                                    loading="lazy">
                                 <div class="mobile-screenshots">
-                                    <img src="src/snapshot/AustinEnglish/AustinEnglish_mobile_1.png" 
-                                         alt="Austin English移动版界面截图1" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
-                                    <img src="src/snapshot/AustinEnglish/AustinEnglish_mobile_2.png" 
-                                         alt="Austin English移动版界面截图2" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
+                                    <img src="src/snapshot/AustinEnglish/AustinEnglish_mobile_1.png"
+                                        alt="Austin English移动版界面截图1" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
+                                    <img src="src/snapshot/AustinEnglish/AustinEnglish_mobile_2.png"
+                                        alt="Austin English移动版界面截图2" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -145,7 +232,7 @@
                                     <h2 class="project-title" data-i18n="austin-title">Austin English</h2>
                                     <p class="project-subtitle" data-i18n="austin-subtitle">个性化英语复习工具</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-education">教育</span>
@@ -172,24 +259,34 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://austin-english.vercel.app/" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    <a href="https://austin-english.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" />
                                         </svg>
                                         <span data-i18n="visit">访问项目</span>
                                     </a>
-                                    <a href="https://github.com/XujunNoahWang/austin-english" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-secondary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    <a href="https://github.com/XujunNoahWang/austin-english" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-secondary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                         <span data-i18n="source">源码</span>
                                     </a>
+                                    <button class="btn btn-share" data-project="austin-english">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <circle cx="18" cy="5" r="3" />
+                                            <circle cx="6" cy="12" r="3" />
+                                            <circle cx="18" cy="19" r="3" />
+                                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                                        </svg>
+                                        <span data-i18n="share">分享</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +301,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -212,45 +310,46 @@
                                     <span class="counter-text">2/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
                                 <button class="device-icon mobile-icon" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_desktop.png" 
-                                     alt="IELTS Timer桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_desktop.png"
+                                    alt="IELTS Timer桌面版界面截图" class="project-screenshot desktop-screenshot active"
+                                    loading="lazy">
                                 <div class="mobile-screenshots">
-                                    <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_mobile_1.png" 
-                                         alt="IELTS Timer移动版界面截图1" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
-                                    <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_mobile_2.png" 
-                                         alt="IELTS Timer移动版界面截图2" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
+                                    <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_mobile_1.png"
+                                        alt="IELTS Timer移动版界面截图1" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
+                                    <img src="src/snapshot/NoahsIELTSTimer/NoahsIELTSTimer_mobile_2.png"
+                                        alt="IELTS Timer移动版界面截图2" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -262,7 +361,7 @@
                                     <h2 class="project-title" data-i18n="ielts-title">Noah's IELTS Timer</h2>
                                     <p class="project-subtitle" data-i18n="ielts-subtitle">雅思考生为雅思考生设计的练习计时器</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-productivity">效率工具</span>
@@ -290,21 +389,20 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://noahs-ielts-timer.vercel.app/" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    <a href="https://noahs-ielts-timer.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" />
                                         </svg>
                                         <span data-i18n="visit">访问项目</span>
                                     </a>
-                                    <a href="https://github.com/XujunNoahWang/IELTSTimer" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-secondary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    <a href="https://github.com/XujunNoahWang/IELTSTimer" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-secondary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                         <span data-i18n="source">源码</span>
                                     </a>
@@ -322,7 +420,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -330,45 +429,43 @@
                                     <span class="counter-text">3/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
                                 <button class="device-icon mobile-icon" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/QuoteCard/QuoteCard_desktop.png" 
-                                     alt="Quote Card桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/QuoteCard/QuoteCard_desktop.png" alt="Quote Card桌面版界面截图"
+                                    class="project-screenshot desktop-screenshot active" loading="lazy">
                                 <div class="mobile-screenshots">
-                                    <img src="src/snapshot/QuoteCard/QuoteCard_mobile_1.png" 
-                                         alt="Quote Card移动版界面截图1" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
-                                    <img src="src/snapshot/QuoteCard/QuoteCard_mobile_2.png" 
-                                         alt="Quote Card移动版界面截图2" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
+                                    <img src="src/snapshot/QuoteCard/QuoteCard_mobile_1.png" alt="Quote Card移动版界面截图1"
+                                        class="project-screenshot mobile-screenshot" loading="lazy">
+                                    <img src="src/snapshot/QuoteCard/QuoteCard_mobile_2.png" alt="Quote Card移动版界面截图2"
+                                        class="project-screenshot mobile-screenshot" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -380,7 +477,7 @@
                                     <h2 class="project-title" data-i18n="quote-title">Quote Card</h2>
                                     <p class="project-subtitle" data-i18n="quote-subtitle">无任何预设语录，只记录你真正喜欢的句子。</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-lifestyle">生活</span>
@@ -407,21 +504,20 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://quote-card-by-noah.vercel.app/" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    <a href="https://quote-card-by-noah.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" />
                                         </svg>
                                         <span data-i18n="visit">访问项目</span>
                                     </a>
-                                    <a href="https://github.com/XujunNoahWang/quote-card" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-secondary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    <a href="https://github.com/XujunNoahWang/quote-card" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-secondary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                         <span data-i18n="source">源码</span>
                                     </a>
@@ -439,7 +535,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -447,45 +544,43 @@
                                     <span class="counter-text">4/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
                                 <button class="device-icon mobile-icon" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/WordBattle/WordBattle_desktop.png" 
-                                     alt="Word Battle桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/WordBattle/WordBattle_desktop.png" alt="Word Battle桌面版界面截图"
+                                    class="project-screenshot desktop-screenshot active" loading="lazy">
                                 <div class="mobile-screenshots">
-                                    <img src="src/snapshot/WordBattle/WordBattle_mobile_1.png" 
-                                         alt="Word Battle移动版界面截图1" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
-                                    <img src="src/snapshot/WordBattle/WordBattle_mobile_2.png" 
-                                         alt="Word Battle移动版界面截图2" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
+                                    <img src="src/snapshot/WordBattle/WordBattle_mobile_1.png" alt="Word Battle移动版界面截图1"
+                                        class="project-screenshot mobile-screenshot" loading="lazy">
+                                    <img src="src/snapshot/WordBattle/WordBattle_mobile_2.png" alt="Word Battle移动版界面截图2"
+                                        class="project-screenshot mobile-screenshot" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -497,7 +592,7 @@
                                     <h2 class="project-title" data-i18n="wordbattle-title">Word Battle</h2>
                                     <p class="project-subtitle" data-i18n="wordbattle-subtitle">多人在线单词图片匹配游戏平台</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-education">教育</span>
@@ -528,21 +623,20 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://wordbattle.up.railway.app/" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    <a href="https://wordbattle.up.railway.app/" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" />
                                         </svg>
                                         <span data-i18n="visit">访问项目</span>
                                     </a>
-                                    <a href="https://github.com/XujunNoahWang/word-battle" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-secondary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    <a href="https://github.com/XujunNoahWang/word-battle" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-secondary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                         <span data-i18n="source">源码</span>
                                     </a>
@@ -560,7 +654,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -568,36 +663,39 @@
                                     <span class="counter-text">5/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
-                                <button class="device-icon mobile-icon disabled" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                <button class="device-icon mobile-icon disabled" data-device="mobile"
+                                    aria-label="Mobile view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/MyTempo/MyTempo_desktop.png" 
-                                     alt="MyTempo桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/MyTempo/MyTempo_desktop.png" alt="MyTempo桌面版界面截图"
+                                    class="project-screenshot desktop-screenshot active" loading="lazy">
                                 <div class="mobile-screenshots">
                                     <!-- MyTempo is desktop-only, no mobile screenshots -->
                                 </div>
@@ -611,7 +709,7 @@
                                     <h2 class="project-title" data-i18n="mytempo-title">MyTempo</h2>
                                     <p class="project-subtitle" data-i18n="mytempo-subtitle">专业的提词器工具</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-productivity">效率工具</span>
@@ -638,14 +736,13 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                            <polyline points="7,10 12,15 17,10"/>
-                                            <line x1="12" y1="15" x2="12" y2="3"/>
+                                    <a href="https://github.com/XujunNoahWang/mytempo/releases/download/v0.5.3/MyTempo.exe"
+                                        target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                            <polyline points="7,10 12,15 17,10" />
+                                            <line x1="12" y1="15" x2="12" y2="3" />
                                         </svg>
                                         <span data-i18n="download">下载应用</span>
                                     </a>
@@ -663,7 +760,8 @@
                             <!-- Mobile Navigation -->
                             <nav class="mobile-navigation" aria-label="Project navigation">
                                 <button class="mobile-nav-arrow mobile-nav-prev" aria-label="Previous project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="15,18 9,12 15,6"></polyline>
                                     </svg>
                                 </button>
@@ -671,45 +769,45 @@
                                     <span class="counter-text">6/6</span>
                                 </div>
                                 <button class="mobile-nav-arrow mobile-nav-next" aria-label="Next project">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
                                         <polyline points="9,6 15,12 9,18"></polyline>
                                     </svg>
                                 </button>
                             </nav>
-                            
+
                             <!-- Device Icons -->
                             <div class="device-icons" data-active="desktop">
-                                <button class="device-icon desktop-icon active" data-device="desktop" aria-label="Desktop view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                        <line x1="8" y1="21" x2="16" y2="21"/>
-                                        <line x1="12" y1="17" x2="12" y2="21"/>
+                                <button class="device-icon desktop-icon active" data-device="desktop"
+                                    aria-label="Desktop view">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
                                     </svg>
                                 </button>
                                 <button class="device-icon mobile-icon" data-device="mobile" aria-label="Mobile view">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
                                     </svg>
                                 </button>
                                 <div class="device-indicator"></div>
                             </div>
-                            
+
                             <!-- Screenshot Container -->
                             <div class="screenshot-container">
-                                <img src="src/snapshot/PromptGrower/PromptGrower_desktop.png" 
-                                     alt="Prompt Grower桌面版界面截图" 
-                                     class="project-screenshot desktop-screenshot active"
-                                     loading="lazy">
+                                <img src="src/snapshot/PromptGrower/PromptGrower_desktop.png" alt="Prompt Grower桌面版界面截图"
+                                    class="project-screenshot desktop-screenshot active" loading="lazy">
                                 <div class="mobile-screenshots">
-                                    <img src="src/snapshot/PromptGrower/PromptGrower_mobile_1.png" 
-                                         alt="Prompt Grower移动版界面截图1" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
-                                    <img src="src/snapshot/PromptGrower/PromptGrower_mobile_2.png" 
-                                         alt="Prompt Grower移动版界面截图2" 
-                                         class="project-screenshot mobile-screenshot"
-                                         loading="lazy">
+                                    <img src="src/snapshot/PromptGrower/PromptGrower_mobile_1.png"
+                                        alt="Prompt Grower移动版界面截图1" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
+                                    <img src="src/snapshot/PromptGrower/PromptGrower_mobile_2.png"
+                                        alt="Prompt Grower移动版界面截图2" class="project-screenshot mobile-screenshot"
+                                        loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -721,7 +819,7 @@
                                     <h2 class="project-title" data-i18n="promptgrower-title">Prompt Grower</h2>
                                     <p class="project-subtitle" data-i18n="promptgrower-subtitle">智能提示词生成器</p>
                                 </header>
-                                
+
                                 <div class="project-tags">
                                     <div class="tag-group">
                                         <span class="tag category-tag" data-i18n="tag-ai">AI工具</span>
@@ -750,21 +848,20 @@
                                 </div>
 
                                 <div class="project-actions">
-                                    <a href="https://promptgrower.vercel.app/" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-primary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    <a href="https://promptgrower.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                        class="btn btn-primary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" />
                                         </svg>
                                         <span data-i18n="visit">访问项目</span>
                                     </a>
-                                    <a href="https://github.com/XujunNoahWang/promptgrower" 
-                                       target="_blank" 
-                                       rel="noopener noreferrer" 
-                                       class="btn btn-secondary">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    <a href="https://github.com/XujunNoahWang/promptgrower" target="_blank"
+                                        rel="noopener noreferrer" class="btn btn-secondary">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path
+                                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                                         </svg>
                                         <span data-i18n="source">源码</span>
                                     </a>
@@ -791,4 +888,5 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

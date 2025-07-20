@@ -644,6 +644,10 @@ body {
         gap: 0.5rem;
     }
     
+    .search-container {
+        display: none; /* 移动端隐藏搜索 */
+    }
+    
     .lang-switch, .theme-switch {
         scale: 0.85; /* 缩小切换器 */
     }
@@ -652,6 +656,8 @@ body {
         font-size: 0.75rem; /* 缩小字体 */
         padding: 0.3rem 0.6rem;
     }
+    
+
     
     .main {
         min-height: auto;
@@ -870,6 +876,15 @@ body {
         padding: 0.25rem 0.5rem;
     }
     
+    /* Toast在小屏幕的优化 */
+    .toast {
+        right: var(--spacing-sm);
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        max-width: none;
+        text-align: center;
+    }
+    
     .project-title {
         font-size: 1.5rem;
     }
@@ -963,6 +978,98 @@ a:focus {
 .device-icon:focus {
     outline: none;
     box-shadow: none;
+}
+
+/* Search Styles */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    width: 200px;
+    transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.search-clear {
+    position: absolute;
+    right: var(--spacing-xs);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.search-clear:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
+
+
+/* Share Button */
+.btn-share {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-share:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
+}
+
+
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    top: 100px;
+    right: var(--spacing-lg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    box-shadow: 0 8px 32px var(--shadow-medium);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all var(--transition-medium);
+    z-index: 1000;
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* High Contrast Mode */
