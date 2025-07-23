@@ -417,8 +417,11 @@ class ProjectCard {
             const deltaX = touch.clientX - startX;
             const deltaY = touch.clientY - startY;
 
-            // 只在水平滑动时阻止默认行为
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            // 智能滑动检测：只在明确的水平滑动时阻止默认行为
+            const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY) * 1.5; // 水平滑动需要更明显的优势
+            const hasSignificantHorizontalMovement = Math.abs(deltaX) > 15; // 增加水平移动阈值
+            
+            if (isHorizontalSwipe && hasSignificantHorizontalMovement) {
                 e.preventDefault();
 
                 // 添加实时视觉反馈（轻微的变换）
