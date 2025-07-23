@@ -417,14 +417,12 @@ class ProjectCard {
             const deltaX = touch.clientX - startX;
             const deltaY = touch.clientY - startY;
 
-            // 智能滑动检测：只在明确的水平滑动时阻止默认行为
+            // 智能滑动检测：只在明确的水平滑动时提供视觉反馈，不阻止默认行为
             const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY) * 1.5; // 水平滑动需要更明显的优势
             const hasSignificantHorizontalMovement = Math.abs(deltaX) > 15; // 增加水平移动阈值
             
             if (isHorizontalSwipe && hasSignificantHorizontalMovement) {
-                e.preventDefault();
-
-                // 添加实时视觉反馈（轻微的变换）
+                // 添加实时视觉反馈（轻微的变换），但不阻止默认滚动行为
                 if (isHighPerformanceDevice()) {
                     const currentSlide = document.querySelector('.project-slide.active');
                     if (currentSlide && Math.abs(deltaX) > 20) {
@@ -492,10 +490,10 @@ class ProjectCard {
             }
         };
 
-        // 使用 passive: false 来启用 preventDefault
-        slider.addEventListener('touchstart', touchStart, { passive: false });
-        slider.addEventListener('touchmove', touchMove, { passive: false });
-        slider.addEventListener('touchend', touchEnd, { passive: false });
+        // 使用 passive: true 来避免Chrome干预警告，通过更智能的检测来避免preventDefault
+        slider.addEventListener('touchstart', touchStart, { passive: true });
+        slider.addEventListener('touchmove', touchMove, { passive: true });
+        slider.addEventListener('touchend', touchEnd, { passive: true });
 
         // 鼠标事件支持
         slider.addEventListener('mousedown', touchStart);
