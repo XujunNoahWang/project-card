@@ -11,7 +11,7 @@
 > **Noah的项目展示平台** - 采用苹果风格设计的响应式项目展示卡片
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.4-green)
+![Version](https://img.shields.io/badge/version-0.5-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ 特性亮点
@@ -242,23 +242,17 @@ http://localhost:8000
 - 🛠️ **开发工具**: 构建脚本、配置文件、性能监控
 - 🎨 **UI增强**: Toast通知、加载状态、错误处理
 
-### v0.6 (2025-07-20) - Prompt Grower更新
-- 🌱 **新增项目**: 添加Prompt Grower - 智能提示词生成器
-- 🤖 **AI工作流**: 支持ChatGPT、Grok、Claude等主流AI工具
-- 📋 **企业级提示词**: 生成开发就绪的详细指令
-- 🦾 **AI IDE集成**: 适配Cursor、Claude Code、Kiro等AI IDE
-- 🎨 **现代技术栈**: 采用React 18 + TypeScript + Tailwind CSS
-- 🔄 **导航更新**: 项目计数器从5个更新为6个
-- 📝 **文档更新**: 更新README，添加Prompt Grower项目详情
-- 🌐 **在线体验**: 提供完整的Web应用体验
-
-### v0.5 (2025-07-04) - MyTempo更新
-- 🌱 **新增项目**: 添加Prompt Grower - 智能提示词生成器
-- 🤖 **AI工具**: 项目组合中首个专门的AI辅助开发工具
-- 🎨 **现代技术栈**: 采用React 18 + TypeScript + Tailwind CSS
-- 🔄 **导航更新**: 项目计数器从5个更新为6个
-- 📝 **文档更新**: 更新README，添加Prompt Grower项目详情
-- 🌐 **在线体验**: 提供完整的Web应用体验
+### v0.5 (2025-07-23) - UI/UX优化更新
+- 🎨 **UI/UX改进**: 修复PC端滚动问题，优化移动端响应式设计
+- 📱 **移动端优化**: 修复iPhone 15 Pro Max等设备的布局问题
+- 🔧 **搜索栏优化**: 改进移动端搜索栏自适应，防止header溢出
+- 🎯 **导航对齐**: 修复桌面端导航计数器与语言切换键的对齐问题
+- 📏 **间距优化**: 增加header与主内容区的间距，改善视觉层次
+- ⚡ **性能优化**: 移除Chrome干预警告，使用passive触摸事件
+- 🔄 **项目计数**: 更新项目总数至6个，包含所有最新项目
+- 📐 **响应式设计**: 优化480px、640px、968px+等不同屏幕尺寸
+- 🎭 **主题系统**: 完善日夜模式和语言切换的移动端体验
+- 🛠️ **技术改进**: 添加flex-wrap和响应式设计改进
 
 ### v0.4 (2025-07-04) - MyTempo更新
 - 🎤 **新增项目**: 添加MyTempo - 专业的提词器工具
@@ -360,7 +354,7 @@ Made with ❤️ by Noah Wang
 > **Noah's Project Showcase Platform** - Responsive project showcase cards with Apple-style design
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.4-green)
+![Version](https://img.shields.io/badge/version-0.5-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ Feature Highlights
@@ -562,13 +556,17 @@ This project follows Apple's design philosophy:
 
 ## 📈 Version History
 
-### v0.5 (2025-07-20) - Prompt Grower Update
-- 🌱 **New Project**: Added Prompt Grower - Intelligent AI Prompt Generator
-- 🤖 **AI Tool**: First dedicated AI-assisted development tool in the portfolio
-- 🎨 **Modern Tech Stack**: Built with React 18 + TypeScript + Tailwind CSS
-- 🔄 **Navigation Update**: Updated project counter from 5 to 6 projects
-- 📝 **Documentation**: Updated README with Prompt Grower project details
-- 🌐 **Online Experience**: Provides complete web application experience
+### v0.5 (2025-07-23) - UI/UX Optimization Update
+- 🎨 **UI/UX Improvements**: Fixed PC scrolling issues, optimized mobile responsive design
+- 📱 **Mobile Optimization**: Fixed layout issues on iPhone 15 Pro Max and other devices
+- 🔧 **Search Bar Optimization**: Improved mobile search bar responsiveness, prevented header overflow
+- 🎯 **Navigation Alignment**: Fixed desktop navigation counter alignment with language switcher
+- 📏 **Spacing Optimization**: Increased spacing between header and main content area, improved visual hierarchy
+- ⚡ **Performance Optimization**: Removed Chrome intervention warnings, used passive touch events
+- 🔄 **Project Count**: Updated total projects to 6, including all latest projects
+- 📐 **Responsive Design**: Optimized for different screen sizes (480px, 640px, 968px+)
+- 🎭 **Theme System**: Enhanced day/night mode and language switching mobile experience
+- 🛠️ **Technical Improvements**: Added flex-wrap and responsive design improvements
 
 ### v0.4 (2025-07-04) - MyTempo Update
 - 🎤 **New Project**: Added MyTempo - Professional Teleprompter Tool
