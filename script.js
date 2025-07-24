@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 6
+    TOTAL_PROJECTS: 7
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -98,6 +98,17 @@ const translations = {
         "promptgrower-feature2": "✓ 多应用类型支持",
         "promptgrower-feature3": "✓ 实时预览生成效果",
         "promptgrower-feature4": "✓ 支持ChatGPT、Grok、Claude",
+
+        // Double Medical Check
+        "double-medical-check-title": "Double Medical Check",
+        "double-medical-check-subtitle": "AI驱动的医疗检测报告分析工具",
+        "double-medical-check-desc": "基于Google Gemini AI的智能医疗检测报告分析应用，支持多图片上传和智能去重，自动识别异常指标并提供诊断建议。采用现代化设计，支持中英文双语界面。",
+        "double-medical-check-feature1": "✓ 多模态AI图像识别分析",
+        "double-medical-check-feature2": "✓ 智能去重和结构化输出",
+        "double-medical-check-feature3": "✓ 异常指标自动检测",
+        "double-medical-check-feature4": "✓ 多图片批量处理",
+        "double-medical-check-feature5": "✓ 中英文双语支持",
+        "double-medical-check-feature6": "✓ 响应式设计适配",
         "promptgrower-feature5": "✓ 生成企业级提示词",
         "promptgrower-feature6": "✓ 适配主流AI IDE",
 
@@ -184,6 +195,17 @@ const translations = {
         "promptgrower-feature4": "✓ Supports ChatGPT, Grok, Claude",
         "promptgrower-feature5": "✓ Generates enterprise-grade prompts",
         "promptgrower-feature6": "✓ Compatible with mainstream AI IDEs",
+
+        // Double Medical Check
+        "double-medical-check-title": "Double Medical Check",
+        "double-medical-check-subtitle": "AI-Powered Medical Test Report Analysis Tool",
+        "double-medical-check-desc": "An intelligent medical test report analysis application based on Google Gemini AI, supporting multi-image upload and smart deduplication, automatically identifying abnormal indicators and providing diagnostic suggestions. Features modern design with Chinese/English bilingual interface support.",
+        "double-medical-check-feature1": "✓ Multimodal AI image recognition analysis",
+        "double-medical-check-feature2": "✓ Smart deduplication and structured output",
+        "double-medical-check-feature3": "✓ Automatic abnormal indicator detection",
+        "double-medical-check-feature4": "✓ Multi-image batch processing",
+        "double-medical-check-feature5": "✓ Chinese/English bilingual support",
+        "double-medical-check-feature6": "✓ Responsive design adaptation",
 
         // Tags
         "tag-education": "Education",

@@ -9,7 +9,7 @@ const CONFIG = {
         name: 'Project Card',
         version: '1.0.0',
         author: 'Noah Wang',
-        totalProjects: 6,
+        totalProjects: 7,
         defaultLanguage: 'zh',
         defaultTheme: 'light',
         animationDuration: 800
@@ -119,6 +119,24 @@ const CONFIG = {
                 mobile: [
                     'src/snapshot/PromptGrower/PromptGrower_mobile_1.png',
                     'src/snapshot/PromptGrower/PromptGrower_mobile_2.png'
+                ]
+            },
+            deviceSupport: ['desktop', 'mobile']
+        },
+        {
+            id: 'double-medical-check',
+            index: 6,
+            category: 'ai',
+            technologies: ['Python', 'Flask', 'Google Gemini AI', 'HTML5', 'CSS3', 'JavaScript'],
+            links: {
+                demo: 'https://double-medical-check.vercel.app/',
+                source: 'https://github.com/XujunNoahWang/double-medical-check'
+            },
+            images: {
+                desktop: 'src/snapshot/DoubleMedicalCheck/DoubleMedicalCheck_desktop.png',
+                mobile: [
+                    'src/snapshot/DoubleMedicalCheck/DoubleMedicalCheck_mobile_1.png',
+                    'src/snapshot/DoubleMedicalCheck/DoubleMedicalCheck_mobile_2.png'
                 ]
             },
             deviceSupport: ['desktop', 'mobile']

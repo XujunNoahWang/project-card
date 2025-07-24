@@ -69,7 +69,8 @@ ProjectCard/
         ├── QuoteCard/
         ├── MyTempo/
         ├── WordBattle/
-        └── PromptGrower/
+        ├── PromptGrower/
+        └── DoubleMedicalCheck/
 ```
 
 ## 🚀 快速开始
@@ -118,7 +119,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的六个精选项目：
+当前展示的七个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -195,6 +196,19 @@ http://localhost:8000
   - ✓ 适配Cursor、Claude Code、Kiro等AI IDE
 - **链接**: [访问项目](https://promptgrower.vercel.app/) | [源码](https://github.com/XujunNoahWang/promptgrower)
 
+### 7. 🩺 Double Medical Check
+**AI驱动的医疗检测报告分析工具**
+- **技术栈**: Python, Flask, Google Gemini AI, HTML5, CSS3, JavaScript
+- **特色**: 基于Google Gemini AI的智能医疗检测报告分析应用，支持多图片上传和智能去重，自动识别异常指标并提供诊断建议
+- **核心功能**: 
+  - ✓ 多模态AI图像识别分析
+  - ✓ 智能去重和结构化输出
+  - ✓ 异常指标自动检测
+  - ✓ 多图片批量处理
+  - ✓ 中英文双语支持
+  - ✓ 响应式设计适配
+- **链接**: [访问项目](https://double-medical-check.vercel.app/) | [源码](https://github.com/XujunNoahWang/double-medical-check)
+
 ## 💻 开发指南
 
 ### 代码规范
@@ -230,62 +244,60 @@ http://localhost:8000
 
 ## 📈 版本历史
 
-### v1.0 (2025-07-20) - 重大功能更新
-- 🔍 **搜索功能**: 新增项目搜索，支持实时搜索和清除
-- 🖼️ **缩略图导航**: 添加项目缩略图快速导航
-- � ***分享功能**: 支持项目链接分享和复制
-- ⌨️ **键盘快捷键**: 完整的键盘导航支持和帮助提示
-- 🔗 **URL路由**: 支持直接访问特定项目的URL
-- � **PWA支持***: 添加渐进式Web应用支持
-- � **性能优新化**: 图片懒加载、错误监控、构建优化
-- 📊 **SEO优化**: 结构化数据、Open Graph、Twitter Cards
-- 🛠️ **开发工具**: 构建脚本、配置文件、性能监控
-- 🎨 **UI增强**: Toast通知、加载状态、错误处理
+### v1.7 (2025-07-24) - Double Medical Check 项目
+- 🩺 **新增项目**: 添加Double Medical Check - AI驱动的医疗检测报告分析工具
+- 🤖 **AI技术**: 基于Google Gemini AI的智能图像识别和分析
+- 📊 **医疗应用**: 支持多图片上传、智能去重、异常检测
+- 🌐 **双语支持**: 完整的中英文界面支持
+- 📱 **响应式设计**: 完美适配桌面和移动设备
 
-### v0.5 (2025-07-23) - UI/UX优化更新
-- 🎨 **UI/UX改进**: 修复PC端滚动问题，优化移动端响应式设计
-- 📱 **移动端优化**: 修复iPhone 15 Pro Max等设备的布局问题
-- 🔧 **搜索栏优化**: 改进移动端搜索栏自适应，防止header溢出
-- 🎯 **导航对齐**: 修复桌面端导航计数器与语言切换键的对齐问题
-- 📏 **间距优化**: 增加header与主内容区的间距，改善视觉层次
-- ⚡ **性能优化**: 移除Chrome干预警告，使用passive触摸事件
-- 🔄 **项目计数**: 更新项目总数至6个，包含所有最新项目
-- 📐 **响应式设计**: 优化480px、640px、968px+等不同屏幕尺寸
-- 🎭 **主题系统**: 完善日夜模式和语言切换的移动端体验
-- 🛠️ **技术改进**: 添加flex-wrap和响应式设计改进
-
-### v0.4 (2025-07-04) - MyTempo更新
+### v1.6 (2025-07-04) - MyTempo 项目
 - 🎤 **新增项目**: 添加MyTempo - 专业的提词器工具
 - 🖥️ **桌面专用**: 项目组合中首个桌面专用应用
 - 🎨 **UI适配**: 为桌面专用项目优化设备切换界面
-- 🔄 **导航更新**: 项目计数器从4个更新为5个
-- 📝 **文档更新**: 更新README，添加MyTempo项目详情
 - 🔗 **下载链接**: 提供直接exe下载，优化用户体验
 
-### v0.3 (2025-07-01) - Word Battle更新
+### v1.5 (2025-07-01) - Word Battle 项目
 - 🎮 **新增项目**: 添加Word Battle - 多人在线单词游戏平台
 - 🌐 **部署优化**: 使用Railway进行项目部署
 - 🎨 **UI优化**: 优化项目展示效果
 - 📱 **移动适配**: 完善所有项目的移动端体验
-- 🔄 **导航优化**: 更新项目导航计数器
-- 📝 **内容更新**: 更新项目描述和文档
 
-### v0.2 (2025-06-19) - 功能扩展更新
+### v1.4 (2025-06-19) - Quote Card 项目
 - 🎯 **新增项目**: 添加Quote Card - 苹果风格语录卡片应用
 - 📱 **移动端支持**: Austin English项目启用完整的移动端体验
 - 🖼️ **设备切换**: 所有项目现支持桌面端/移动端视图切换
 - 🎨 **UI优化**: 移除header边框，优化导航计数器层级
-- 📝 **内容更新**: 项目描述更加精准，去除过时的限制提示
-- 🔧 **体验改进**: 统一所有项目的交互体验和视觉一致性
 
-### v0.1 (2025-06-15) - 初始发布
+### v1.3 (2025-06-15) - Prompt Grower 项目
+- 🌱 **新增项目**: 添加Prompt Grower - 智能提示词生成器
+- 🤖 **AI工具**: 9步渐进式需求收集，支持多种AI工具
+- 📊 **企业级**: 生成企业级开发提示词，适配主流AI IDE
+- 🎨 **现代化UI**: React 18 + TypeScript + Tailwind CSS
+
+### v1.2 (2025-06-15) - IELTS Timer 项目
+- ⏱️ **新增项目**: 添加Noah's IELTS Timer - 雅思练习专用计时器
+- 🎯 **专业设计**: 专为雅思考试设计的多模块计时器
+- 🔊 **音频支持**: 音频通知和警告功能
+- 🎨 **可视化**: 圆形进度可视化指示器
+
+### v1.1 (2025-06-15) - Austin English 项目
+- 🎓 **新增项目**: 添加Austin English - 个性化英语复习工具
+- 🎯 **零预设**: 零预设内容，完全由家长自建学习内容库
+- 🎨 **现代化**: Next.js + React + TypeScript技术栈
+- 📱 **响应式**: 完美适配桌面和移动设备
+
+### v1.0 (2025-06-15) - Project Card 基础平台
 - 🎉 **核心功能**: 完全重构的苹果风格滑动动画系统
-- ✨ **动画效果**: 苹果风格同步滑动效果
-- 🚀 **性能优化**: 硬件加速，60fps流畅动画
+- ✨ **动画效果**: 苹果风格同步滑动效果，60fps流畅动画
 - 🌍 **双语支持**: 完整的中英文国际化
 - 🎭 **主题系统**: 日夜模式无缝切换
 - 📱 **响应式设计**: 完善的移动端适配
-- 🎯 **初始项目**: Austin English和IELTS Timer两个精选项目
+- 🔍 **搜索功能**: 项目搜索，支持实时搜索和清除
+- 📤 **分享功能**: 支持项目链接分享和复制
+- ⌨️ **键盘导航**: 完整的键盘导航支持
+- 🔗 **URL路由**: 支持直接访问特定项目
+- 🛠️ **开发工具**: 构建脚本、配置文件、性能监控
 
 ## 🌟 特色功能
 
@@ -444,7 +456,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Six carefully selected projects currently showcased:
+Seven carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -521,6 +533,19 @@ Six carefully selected projects currently showcased:
   - ✓ Responsive Design
 - **Links**: [Visit Project](https://promptgrower.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/promptgrower)
 
+### 7. 🩺 Double Medical Check
+**AI-Powered Medical Test Report Analysis Tool**
+- **Tech Stack**: Python, Flask, Google Gemini AI, HTML5, CSS3, JavaScript
+- **Unique Feature**: Intelligent medical test report analysis application based on Google Gemini AI, supporting multi-image upload and smart deduplication, automatically identifying abnormal indicators and providing diagnostic suggestions
+- **Core Functions**: 
+  - ✓ Multimodal AI image recognition analysis
+  - ✓ Smart deduplication and structured output
+  - ✓ Automatic abnormal indicator detection
+  - ✓ Multi-image batch processing
+  - ✓ Chinese/English bilingual support
+  - ✓ Responsive design adaptation
+- **Links**: [Visit Project](https://double-medical-check.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/double-medical-check)
+
 ## 💻 Development Guide
 
 ### Code Standards
@@ -556,50 +581,60 @@ This project follows Apple's design philosophy:
 
 ## 📈 Version History
 
-### v0.5 (2025-07-23) - UI/UX Optimization Update
-- 🎨 **UI/UX Improvements**: Fixed PC scrolling issues, optimized mobile responsive design
-- 📱 **Mobile Optimization**: Fixed layout issues on iPhone 15 Pro Max and other devices
-- 🔧 **Search Bar Optimization**: Improved mobile search bar responsiveness, prevented header overflow
-- 🎯 **Navigation Alignment**: Fixed desktop navigation counter alignment with language switcher
-- 📏 **Spacing Optimization**: Increased spacing between header and main content area, improved visual hierarchy
-- ⚡ **Performance Optimization**: Removed Chrome intervention warnings, used passive touch events
-- 🔄 **Project Count**: Updated total projects to 6, including all latest projects
-- 📐 **Responsive Design**: Optimized for different screen sizes (480px, 640px, 968px+)
-- 🎭 **Theme System**: Enhanced day/night mode and language switching mobile experience
-- 🛠️ **Technical Improvements**: Added flex-wrap and responsive design improvements
+### v1.7 (2025-07-24) - Double Medical Check Project
+- 🩺 **New Project**: Added Double Medical Check - AI-powered medical test report analysis tool
+- 🤖 **AI Technology**: Based on Google Gemini AI for intelligent image recognition and analysis
+- 📊 **Medical Application**: Supports multi-image upload, smart deduplication, abnormal detection
+- 🌐 **Bilingual Support**: Complete Chinese/English interface support
+- 📱 **Responsive Design**: Perfect adaptation for desktop and mobile devices
 
-### v0.4 (2025-07-04) - MyTempo Update
+### v1.6 (2025-07-04) - MyTempo Project
 - 🎤 **New Project**: Added MyTempo - Professional Teleprompter Tool
 - 🖥️ **Desktop Focus**: First desktop-only application in the portfolio
 - 🎨 **UI Adaptation**: Optimized device switching for desktop-only projects
-- 🔄 **Navigation Update**: Updated project counter from 4 to 5 projects
-- 📝 **Documentation**: Updated README with MyTempo project details
 - 🔗 **Download Link**: Provided direct exe download for better user experience
 
-### v0.3 (2025-07-01) - Word Battle Update
+### v1.5 (2025-07-01) - Word Battle Project
 - 🎮 **New Project**: Added Word Battle - Multiplayer Online Word Picture Matching Game Platform
 - 🌐 **Deployment Optimization**: Used Railway for project deployment
 - 🎨 **UI Optimization**: Optimized project display effect
 - 📱 **Mobile Adaptation**: Perfect mobile experience for all projects
-- 🔄 **Navigation Optimization**: Updated project navigation counter
-- 📝 **Content Update**: Updated project description and documentation
 
-### v0.2 (2025-06-19) - Feature Expansion Update
+### v1.4 (2025-06-19) - Quote Card Project
 - 🎯 **New Project**: Added Quote Card - Apple-style quote card application
 - 📱 **Mobile Support**: Austin English project now has full mobile experience
 - 🖼️ **Device Switching**: All projects now support desktop/mobile view switching
 - 🎨 **UI Optimization**: Removed header border, optimized navigation counter hierarchy
-- 📝 **Content Update**: More precise project descriptions, removed outdated limitation hints
-- 🔧 **Experience Improvement**: Unified interaction experience and visual consistency across all projects
 
-### v0.1 (2025-06-15) - Initial Release
+### v1.3 (2025-06-15) - Prompt Grower Project
+- 🌱 **New Project**: Added Prompt Grower - Intelligent AI Prompt Generator
+- 🤖 **AI Tools**: 9-step progressive requirement collection, supports multiple AI tools
+- 📊 **Enterprise**: Generates enterprise-grade development prompts, compatible with mainstream AI IDEs
+- 🎨 **Modern UI**: React 18 + TypeScript + Tailwind CSS
+
+### v1.2 (2025-06-15) - IELTS Timer Project
+- ⏱️ **New Project**: Added Noah's IELTS Timer - IELTS Practice Dedicated Timer
+- 🎯 **Professional Design**: Multi-module timer specifically designed for IELTS exam
+- 🔊 **Audio Support**: Audio notifications and warnings functionality
+- 🎨 **Visualization**: Circular progress visual indicator
+
+### v1.1 (2025-06-15) - Austin English Project
+- 🎓 **New Project**: Added Austin English - Personalized English Review Tool
+- 🎯 **Zero Preset**: Zero preset content, completely built by parents' custom content library
+- 🎨 **Modern**: Next.js + React + TypeScript tech stack
+- 📱 **Responsive**: Perfect adaptation for desktop and mobile devices
+
+### v1.0 (2025-06-15) - Project Card Base Platform
 - 🎉 **Core Features**: Completely refactored Apple-style sliding animation system
-- ✨ **Animation Effects**: Apple-style synchronized sliding effects
-- 🚀 **Performance Optimization**: Hardware acceleration, 60fps smooth animations
+- ✨ **Animation Effects**: Apple-style synchronized sliding effects, 60fps smooth animations
 - 🌍 **Bilingual Support**: Complete Chinese/English internationalization
 - 🎭 **Theme System**: Seamless day/night mode switching
 - 📱 **Responsive Design**: Comprehensive mobile adaptation
-- 🎯 **Initial Projects**: Austin English and IELTS Timer two featured projects
+- 🔍 **Search Function**: Project search, supports real-time search and clear
+- 📤 **Share Function**: Supports project link sharing and copying
+- ⌨️ **Keyboard Navigation**: Complete keyboard navigation support
+- 🔗 **URL Routing**: Supports direct access to specific projects
+- 🛠️ **Development Tools**: Build scripts, configuration files, performance monitoring
 
 ## 🌟 Special Features
 
