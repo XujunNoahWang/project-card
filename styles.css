@@ -1208,3 +1208,10 @@ a:focus {
         box-shadow: 0 4px 12px var(--shadow-medium);
     }
 }
+
+/* Star Icon */
+.star-icon {
+    display: inline-block;
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}

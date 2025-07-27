@@ -80,7 +80,7 @@ const translations = {
         "mytempo-feature5": "✓ 动态字体大小调整",
 
         // Word Battle
-        "wordbattle-title": "Word Battle",
+        "wordbattle-title": "Word Battle <span class=\"star-icon\">⭐</span>",
         "wordbattle-subtitle": "多人在线单词图片匹配游戏平台",
         "wordbattle-desc": "一个基于WebSocket的多人在线单词图片匹配游戏平台，支持多设备实时连接和房间管理。采用Apple设计语言，提供现代化和优雅的用户界面。",
         "wordbattle-feature1": "✓ 多人实时对战系统",
@@ -91,7 +91,7 @@ const translations = {
         "wordbattle-feature6": "✓ 完美适配移动端",
 
         // Prompt Grower
-        "promptgrower-title": "Prompt Grower",
+        "promptgrower-title": "Prompt Grower <span class=\"star-icon\">⭐</span>",
         "promptgrower-subtitle": "智能提示词生成器",
         "promptgrower-desc": "通过9个精心设计的步骤，将模糊的想法转化为结构化的元提示词。发送给ChatGPT、Grok、Claude等AI工具生成企业级开发提示词，最终在Cursor、Claude Code、Kiro等AI IDE中实现代码生成和项目开发。",
         "promptgrower-feature1": "✓ 9步渐进式需求收集",
@@ -100,7 +100,7 @@ const translations = {
         "promptgrower-feature4": "✓ 支持ChatGPT、Grok、Claude",
 
         // Double Medical Check
-        "double-medical-check-title": "Double Medical Check",
+        "double-medical-check-title": "Double Medical Check <span class=\"star-icon\">⭐</span>",
         "double-medical-check-subtitle": "AI驱动的医疗检测报告分析工具",
         "double-medical-check-desc": "基于Google Gemini AI的智能医疗检测报告分析应用，支持多图片上传和智能去重，自动识别异常指标并提供诊断建议。采用现代化设计，支持中英文双语界面。",
         "double-medical-check-feature1": "✓ 多模态AI图像识别分析",
@@ -186,7 +186,7 @@ const translations = {
         "mytempo-feature5": "✓ Dynamic Font Size Adjustment",
 
         // Word Battle
-        "wordbattle-title": "Word Battle",
+        "wordbattle-title": "Word Battle <span class=\"star-icon\">⭐</span>",
         "wordbattle-subtitle": "Multiplayer Online Word-Image Matching Game Platform",
         "wordbattle-desc": "A WebSocket-based multiplayer online word-image matching game platform that supports real-time multi-device connections and room management. Featuring Apple design language for a modern and elegant user interface.",
         "wordbattle-feature1": "✓ Real-time Multiplayer Battle System",
@@ -197,7 +197,7 @@ const translations = {
         "wordbattle-feature6": "✓ Perfect Mobile Adaptation",
 
         // Prompt Grower
-        "promptgrower-title": "Prompt Grower",
+        "promptgrower-title": "Prompt Grower <span class=\"star-icon\">⭐</span>",
         "promptgrower-subtitle": "Intelligent AI Prompt Generator",
         "promptgrower-desc": "Transform vague ideas into structured meta-prompts through 9 carefully designed steps. Send to ChatGPT, Grok, Claude, and other AI tools to generate enterprise-grade development prompts, then use in Cursor, Claude Code, Kiro, and other AI IDEs for code generation and project development.",
         "promptgrower-feature1": "✓ 9-step progressive requirement collection",
@@ -208,7 +208,7 @@ const translations = {
         "promptgrower-feature6": "✓ Compatible with mainstream AI IDEs",
 
         // Double Medical Check
-        "double-medical-check-title": "Double Medical Check",
+        "double-medical-check-title": "Double Medical Check <span class=\"star-icon\">⭐</span>",
         "double-medical-check-subtitle": "AI-Powered Medical Test Report Analysis Tool",
         "double-medical-check-desc": "An intelligent medical test report analysis application based on Google Gemini AI, supporting multi-image upload and smart deduplication, automatically identifying abnormal indicators and providing diagnostic suggestions. Features modern design with Chinese/English bilingual interface support.",
         "double-medical-check-feature1": "✓ Multimodal AI image recognition analysis",
@@ -736,7 +736,12 @@ class ProjectCard {
         elements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (currentTranslations[key]) {
-                element.textContent = currentTranslations[key];
+                // Check if the translation contains HTML
+                if (currentTranslations[key].includes('<span')) {
+                    element.innerHTML = currentTranslations[key];
+                } else {
+                    element.textContent = currentTranslations[key];
+                }
             }
         });
     }
