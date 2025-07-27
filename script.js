@@ -15,7 +15,7 @@ const STORAGE_KEYS = {
 const DEFAULTS = {
     LANGUAGE: 'zh',
     THEME: 'light',
-    TOTAL_PROJECTS: 7
+    TOTAL_PROJECTS: 8
 };
 
 // 优化动画性能 - 根据设备性能调整
@@ -109,6 +109,17 @@ const translations = {
         "double-medical-check-feature4": "✓ 多图片批量处理",
         "double-medical-check-feature5": "✓ 中英文双语支持",
         "double-medical-check-feature6": "✓ 响应式设计适配",
+
+        // Austin Math
+        "austin-math-title": "Austin Math",
+        "austin-math-subtitle": "专为幼儿园设计的数学练习生成器",
+        "austin-math-desc": "Austin Math是一个智能数学习题生成器，专门为幼儿园儿童设计。支持自定义难度级别、题目数量和类型，自动生成加减法练习题。支持中英文双语界面，提供打印友好的工作表格式。",
+        "austin-math-feature1": "✓ 智能题目生成算法",
+        "austin-math-feature2": "✓ 可配置难度和题目数量",
+        "austin-math-feature3": "✓ 支持二元和三元运算问题",
+        "austin-math-feature4": "✓ 打印友好的工作表设计",
+        "austin-math-feature5": "✓ 中英文双语支持",
+        "austin-math-feature6": "✓ 离线使用功能",
         "promptgrower-feature5": "✓ 生成企业级提示词",
         "promptgrower-feature6": "✓ 适配主流AI IDE",
 
@@ -206,6 +217,17 @@ const translations = {
         "double-medical-check-feature4": "✓ Multi-image batch processing",
         "double-medical-check-feature5": "✓ Chinese/English bilingual support",
         "double-medical-check-feature6": "✓ Responsive design adaptation",
+
+        // Austin Math
+        "austin-math-title": "Austin Math",
+        "austin-math-subtitle": "Math Practice Generator for Kindergarten",
+        "austin-math-desc": "Austin Math is an intelligent math problem generator designed specifically for kindergarten children. Supports customizable difficulty levels, problem quantities and types, automatically generating addition and subtraction practice problems. Features bilingual Chinese/English interface with print-friendly worksheet format.",
+        "austin-math-feature1": "✓ Intelligent problem generation algorithm",
+        "austin-math-feature2": "✓ Configurable difficulty and problem count",
+        "austin-math-feature3": "✓ Supports two and three operand problems",
+        "austin-math-feature4": "✓ Print-friendly worksheet design",
+        "austin-math-feature5": "✓ Chinese/English bilingual support",
+        "austin-math-feature6": "✓ Offline usage capability",
 
         // Tags
         "tag-education": "Education",
@@ -602,7 +624,9 @@ class ProjectCard {
             'quote-card',
             'word-battle',
             'mytempo',
-            'promptgrower'
+            'promptgrower',
+            'double-medical-check',
+            'austin-math'
         ];
         
         return projectIds.indexOf(projectId);
@@ -618,7 +642,9 @@ class ProjectCard {
             'quote-card', 
             'word-battle',
             'mytempo',
-            'promptgrower'
+            'promptgrower',
+            'double-medical-check',
+            'austin-math'
         ];
         
         const currentProjectId = projectIds[this.currentProject];

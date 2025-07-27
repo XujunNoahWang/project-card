@@ -9,7 +9,7 @@ const CONFIG = {
         name: 'Project Card',
         version: '1.0.0',
         author: 'Noah Wang',
-        totalProjects: 7,
+        totalProjects: 8,
         defaultLanguage: 'zh',
         defaultTheme: 'light',
         animationDuration: 800
@@ -137,6 +137,24 @@ const CONFIG = {
                 mobile: [
                     'src/snapshot/DoubleMedicalCheck/DoubleMedicalCheck_mobile_1.png',
                     'src/snapshot/DoubleMedicalCheck/DoubleMedicalCheck_mobile_2.png'
+                ]
+            },
+            deviceSupport: ['desktop', 'mobile']
+        },
+        {
+            id: 'austin-math',
+            index: 7,
+            category: 'education',
+            technologies: ['React 18', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+            links: {
+                demo: 'https://austin-math.vercel.app/',
+                source: 'https://github.com/XujunNoahWang/austin-math'
+            },
+            images: {
+                desktop: 'src/snapshot/AustinMath/AustinMath_desktop.png',
+                mobile: [
+                    'src/snapshot/AustinMath/AustinMath_mobile_1.png',
+                    'src/snapshot/AustinMath/AustinMath_mobile_2.png'
                 ]
             },
             deviceSupport: ['desktop', 'mobile']
