@@ -11,7 +11,7 @@
 > **Noah的项目展示平台** - 采用苹果风格设计的响应式项目展示卡片
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.5-green)
+![Version](https://img.shields.io/badge/version-1.8-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ 特性亮点
@@ -70,7 +70,8 @@ ProjectCard/
         ├── MyTempo/
         ├── WordBattle/
         ├── PromptGrower/
-        └── DoubleMedicalCheck/
+        ├── DoubleMedicalCheck/
+        └── AustinMath/
 ```
 
 ## 🚀 快速开始
@@ -119,7 +120,7 @@ http://localhost:8000
 
 ## 🎯 展示项目
 
-当前展示的七个精选项目：
+当前展示的八个精选项目：
 
 ### 1. 🎓 Austin English
 **个性化英语复习工具**
@@ -209,6 +210,19 @@ http://localhost:8000
   - ✓ 响应式设计适配
 - **链接**: [访问项目](https://double-medical-check.vercel.app/) | [源码](https://github.com/XujunNoahWang/double-medical-check)
 
+### 8. 🧮 Austin Math
+**专为幼儿园设计的数学练习生成器**
+- **技术栈**: React 18, TypeScript, Tailwind CSS, Vercel
+- **特色**: 智能数学习题生成器，专门为幼儿园儿童设计，支持自定义难度级别、题目数量和类型
+- **核心功能**: 
+  - ✓ 智能题目生成算法
+  - ✓ 可配置难度和题目数量
+  - ✓ 支持二元和三元运算问题
+  - ✓ 打印友好的工作表设计
+  - ✓ 中英文双语支持
+  - ✓ 离线使用功能
+- **链接**: [访问项目](https://austin-math.vercel.app/) | [源码](https://github.com/XujunNoahWang/austin-math)
+
 ## 💻 开发指南
 
 ### 代码规范
@@ -243,6 +257,14 @@ http://localhost:8000
 - **细节至上** - 精雕细琢每个交互细节
 
 ## 📈 版本历史
+
+### v1.8 (2025-07-27) - Austin Math 项目
+- 🧮 **新增项目**: 添加Austin Math - 专为幼儿园设计的数学练习生成器
+- 🎯 **智能生成**: 智能数学习题生成算法，支持自定义难度和题目数量
+- 📊 **多元运算**: 支持二元和三元运算问题，适合不同学习阶段
+- 🖨️ **打印友好**: 提供打印友好的工作表设计，便于线下练习
+- 🌐 **双语支持**: 完整的中英文界面支持
+- 📱 **离线功能**: 支持离线使用，随时随地练习数学
 
 ### v1.7 (2025-07-24) - Double Medical Check 项目
 - 🩺 **新增项目**: 添加Double Medical Check - AI驱动的医疗检测报告分析工具
@@ -366,7 +388,7 @@ Made with ❤️ by Noah Wang
 > **Noah's Project Showcase Platform** - Responsive project showcase cards with Apple-style design
 
 ![Project Card](https://img.shields.io/badge/Project-Card-blue)
-![Version](https://img.shields.io/badge/version-0.5-green)
+![Version](https://img.shields.io/badge/version-1.8-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 ## ✨ Feature Highlights
@@ -456,7 +478,7 @@ http://localhost:8000
 
 ## 🎯 Featured Projects
 
-Seven carefully selected projects currently showcased:
+Eight carefully selected projects currently showcased:
 
 ### 1. 🎓 Austin English
 **Personalized English Review Tool**
@@ -546,6 +568,19 @@ Seven carefully selected projects currently showcased:
   - ✓ Responsive design adaptation
 - **Links**: [Visit Project](https://double-medical-check.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/double-medical-check)
 
+### 8. 🧮 Austin Math
+**Math Practice Generator for Kindergarten**
+- **Tech Stack**: React 18, TypeScript, Tailwind CSS, Vercel
+- **Unique Feature**: Intelligent math problem generator designed specifically for kindergarten children, supporting customizable difficulty levels, problem quantities and types
+- **Core Functions**: 
+  - ✓ Intelligent problem generation algorithm
+  - ✓ Configurable difficulty and problem count
+  - ✓ Supports two and three operand problems
+  - ✓ Print-friendly worksheet design
+  - ✓ Chinese/English bilingual support
+  - ✓ Offline usage capability
+- **Links**: [Visit Project](https://austin-math.vercel.app/) | [Source Code](https://github.com/XujunNoahWang/austin-math)
+
 ## 💻 Development Guide
 
 ### Code Standards
@@ -580,6 +615,14 @@ This project follows Apple's design philosophy:
 - **Details First** - Meticulously crafted interaction details
 
 ## 📈 Version History
+
+### v1.8 (2025-07-27) - Austin Math Project
+- 🧮 **New Project**: Added Austin Math - Math Practice Generator for Kindergarten
+- 🎯 **Intelligent Generation**: Smart math problem generation algorithm, supports customizable difficulty and problem count
+- 📊 **Multi-operand**: Supports two and three operand problems, suitable for different learning stages
+- 🖨️ **Print-friendly**: Provides print-friendly worksheet design for offline practice
+- 🌐 **Bilingual Support**: Complete Chinese/English interface support
+- 📱 **Offline Function**: Supports offline usage, practice math anytime anywhere
 
 ### v1.7 (2025-07-24) - Double Medical Check Project
 - 🩺 **New Project**: Added Double Medical Check - AI-powered medical test report analysis tool
